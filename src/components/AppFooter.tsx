@@ -1,56 +1,59 @@
 import { FunctionComponent } from "react";
 import getAssetLocation from "../utils/assetLocator";
+import { useTranslation } from "react-i18next";
 
 type AppFooterProps = {
 
 }
 
 const AppFooter: FunctionComponent<AppFooterProps> = ({ }) => {
+    const {t} = useTranslation();
+
     return (
         <footer className="text-center text-lg-start text-muted climate-scheme-bg-black p-1">
             <section className="climate-scheme-color-green">
                 <div className="container text-center text-md-start">
                     <div className="row mt-3">
-                        <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <div className="col-md-3 col-lg-4 col-xl-4 mx-auto mb-4">
                             <h6 className="text-uppercase fw-bold mb-4">
                                 <img src={getAssetLocation("logo.png", "img")} alt="Bootstrap" width="32" height="32" />
-                                &nbsp;<strong>ECO</strong>TRACE
+                                &nbsp;<strong>{t("claim.part1")}</strong>{t("claim.part2")}
                             </h6>
                             <p>
-                            Darstellung von CO<sub>2</sub> Emissionen nach Land und Unternehmen.<br/>
+                                {t("footer.projectDescription")}
                             </p>
                             <p>
-                                Ein Projekt im Rahmen einer Fallstudie für die IU Internationale Hochschule.
+                                {t("footer.projectContext")}
+                            </p>
+                        </div>
+
+                        <div className="col-md-3 col-lg-3 col-xl-2 mx-auto mb-4">
+                            <h6 className="text-uppercase fw-bold mb-4">
+                                {t("footer.linkHeader")}
+                            </h6>
+                            <p>
+                                <a href="#!" className="text-reset">{t("navigation.home")}</a>
+                            </p>
+                            <p>
+                                <a href="#!" className="text-reset">{t("navigation.database")}</a>
+                            </p>
+                            <p>
+                                <a href="#!" className="text-reset">{t("navigation.co2info")}</a>
+                            </p>
+                            <p>
+                                <a href="#!" className="text-reset">{t("navigation.participation")}</a>
                             </p>
                         </div>
 
                         <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                             <h6 className="text-uppercase fw-bold mb-4">
-                                Übersicht
+                                {t("footer.legal.header")}
                             </h6>
                             <p>
-                                <a href="#!" className="text-reset">Startseite</a>
+                                {t("footer.legal.imprint")}
                             </p>
                             <p>
-                                <a href="#!" className="text-reset">Emissionsdatenbank</a>
-                            </p>
-                            <p>
-                                <a href="#!" className="text-reset">Was ist CO<sub>2</sub>?</a>
-                            </p>
-                            <p>
-                                <a href="#!" className="text-reset">Was kann ich beitragen?</a>
-                            </p>
-                        </div>
-
-                        <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                            <h6 className="text-uppercase fw-bold mb-4">
-                                Rechtliches
-                            </h6>
-                            <p>
-                                <a href="#!" className="text-reset">Impressum</a>
-                            </p>
-                            <p>
-                                <a href="#!" className="text-reset">Datenschutz</a>
+                                <a href="#!" className="text-reset">{t("footer.legal.privacy")}</a>
                             </p>
                         </div>
                     </div>
@@ -58,7 +61,7 @@ const AppFooter: FunctionComponent<AppFooterProps> = ({ }) => {
             </section>
 
             <div className="text-center p-4 climate-scheme-color-green">
-                © 2024 Robin Fabian Alexander Kindler
+                © {t("footer.copyright")}
             </div>
         </footer>
     )

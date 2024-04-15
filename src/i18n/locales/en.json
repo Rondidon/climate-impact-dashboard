@@ -27,9 +27,12 @@
             "projectDescription": "Presentation of CO2 emissions by country and company.",
             "projectContext": "A project within the context of a case study for the IU International University.",
             "legal": {
+                "header": "Legal",
                 "privacy": "Privacy Notice",
                 "imprint": "Imprint"
-            }
+            },
+            "linkHeader": "Links",
+            "copyright": "Robin Fabian Alexander Kindler"
         }
     }
 }
