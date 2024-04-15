@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import getAssetLocation from "../utils/assetLocator";
 
 type AppFooterProps = {
 
@@ -12,59 +13,45 @@ const AppFooter: FunctionComponent<AppFooterProps> = ({ }) => {
                     <div className="row mt-3">
                         <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                             <h6 className="text-uppercase fw-bold mb-4">
-                                <i className="fas fa-gem me-3"></i>Company name
+                                <img src={getAssetLocation("logo.png", "img")} alt="Bootstrap" width="32" height="32" />
+                                &nbsp;<strong>ECO</strong>TRACE
                             </h6>
                             <p>
-                                Here you can use rows and columns to organize your footer content. Lorem ipsum
-                                dolor sit amet, consectetur adipisicing elit.
+                            Darstellung von CO<sub>2</sub> Emissionen nach Land und Unternehmen.<br/>
+                            </p>
+                            <p>
+                                Ein Projekt im Rahmen einer Fallstudie für die IU Internationale Hochschule.
                             </p>
                         </div>
 
                         <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                             <h6 className="text-uppercase fw-bold mb-4">
-                                Products
+                                Übersicht
                             </h6>
                             <p>
-                                <a href="#!" className="text-reset">Angular</a>
+                                <a href="#!" className="text-reset">Startseite</a>
                             </p>
                             <p>
-                                <a href="#!" className="text-reset">React</a>
+                                <a href="#!" className="text-reset">Emissionsdatenbank</a>
                             </p>
                             <p>
-                                <a href="#!" className="text-reset">Vue</a>
+                                <a href="#!" className="text-reset">Was ist CO<sub>2</sub>?</a>
                             </p>
                             <p>
-                                <a href="#!" className="text-reset">Laravel</a>
+                                <a href="#!" className="text-reset">Was kann ich beitragen?</a>
                             </p>
                         </div>
 
-                        <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                             <h6 className="text-uppercase fw-bold mb-4">
-                                Useful links
+                                Rechtliches
                             </h6>
                             <p>
-                                <a href="#!" className="text-reset">Pricing</a>
+                                <a href="#!" className="text-reset">Impressum</a>
                             </p>
                             <p>
-                                <a href="#!" className="text-reset">Settings</a>
+                                <a href="#!" className="text-reset">Datenschutz</a>
                             </p>
-                            <p>
-                                <a href="#!" className="text-reset">Orders</a>
-                            </p>
-                            <p>
-                                <a href="#!" className="text-reset">Help</a>
-                            </p>
-                        </div>
-
-                        <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                            <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
-                            <p><i className="fas fa-home me-3"></i> New York, NY 10012, US</p>
-                            <p>
-                                <i className="fas fa-envelope me-3"></i>
-                                info@example.com
-                            </p>
-                            <p><i className="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                            <p><i className="fas fa-print me-3"></i> + 01 234 567 89</p>
                         </div>
                     </div>
                 </div>
