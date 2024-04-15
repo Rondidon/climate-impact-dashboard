@@ -1,0 +1,35 @@
+{
+    "translation": {
+        "common": {
+            "languages": {
+                "de": "German",
+                "en": "English"
+            },
+            "actions": {
+                "search": "Search"
+            }
+        },
+        "claim": {
+            "part1": "ECO",
+            "part2": "TRACE"
+        },
+        "header": {
+            "languageSelector": "Language",
+            "searchPlaceholder": "Search term"
+        },
+        "navigation": {
+            "home": "Home",
+            "database": "Emissions Database",
+            "co2info": "What is CO2?",
+            "participation": "What can I contribute?"
+        },
+        "footer": {
+            "projectDescription": "Presentation of CO2 emissions by country and company.",
+            "projectContext": "A project within the context of a case study for the IU International University.",
+            "legal": {
+                "privacy": "Privacy Notice",
+                "imprint": "Imprint"
+            }
+        }
+    }
+}

@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Bootstrap CSS
 import 'bootstrap/dist/js/bootstrap.bundle.min'; // Bootstrap JS
 import './styles/climate-scheme.css'; // custom css
+import './i18n/i18n' // i18next configuration
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
