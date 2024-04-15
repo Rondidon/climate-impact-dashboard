@@ -28,6 +28,10 @@
     border: 1px solid #eafccb;
 }
 
+.climate-scheme-color-green {
+    color: #eafccb;
+}
+
 .climate-scheme-btn:hover {
     color: #ffffff;
     border: 1px solid #ffffff;
