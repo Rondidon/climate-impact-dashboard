@@ -10,6 +10,11 @@
   color: #f1efe9;
 }
 
+.climate-scheme-bright-text {
+  font-family: Tahoma, sans-serif;
+  color: #f1efe9;
+}
+
 a:link {
   font-family: Tahoma, sans-serif;
   color: #eafccb;
@@ -24,6 +29,10 @@ a:visited {
 
 .climate-scheme-bg-black {
   background-color: #010101;
+}
+
+.climate-scheme-bg-dark-grey {
+  background-color: #141414;
 }
 
 .climate-scheme-bg-grey {

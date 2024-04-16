@@ -5,7 +5,9 @@ type ParticipationProps = {};
 const Participation: FunctionComponent<ParticipationProps> = ({}) => {
   return (
     <div className="container">
-      <h1 className="my-5">Wie kann ich beitragen zur CO2-Reduktion?</h1>
+      <h1 className="row mt-3 my-xl-5 mb-5 my-xl-0">
+        Wie kann ich beitragen zur CO2-Reduktion?
+      </h1>
       <div className="row">
         <div className="col-lg-4 col-md-6 mb-4">
           <div className="card h-100">

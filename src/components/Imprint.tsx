@@ -4,7 +4,7 @@ type AppMainProps = {};
 
 const Imprint: FunctionComponent<AppMainProps> = ({}) => {
   return (
-    <>
+    <div className="container my-0 my-xl-5">
       <h1>Impressum</h1>
       <p>
         Robin Fabian Alexander Kindler
@@ -24,7 +24,7 @@ const Imprint: FunctionComponent<AppMainProps> = ({}) => {
       <p>
         Quelle: <a href="https://www.e-recht24.de">eRecht24</a>
       </p>
-    </>
+    </div>
   );
 };
 

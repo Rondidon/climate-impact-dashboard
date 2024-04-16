@@ -5,7 +5,7 @@ type CO2InfoProps = {};
 const CO2Info: FunctionComponent<CO2InfoProps> = ({}) => {
   return (
     <div className="container">
-      <div className="row my-5">
+      <div className="row my-1 my-xl-5">
         <div className="col">
           <h1 className="mb-4">Was ist CO2?</h1>
           <p>

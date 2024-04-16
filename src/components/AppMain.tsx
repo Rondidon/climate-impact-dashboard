@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 import { Route, Routes } from "react-router-dom";
 import CO2Info from "./CO2Info";
 import DatabaseViewer from "./DatabaseViewer";
-import Home from "./Home.tsx";
+import Home from "./Home";
 import Imprint from "./Imprint";
 import NotFoundPage from "./NotFoundPage";
 import Participation from "./Participation";

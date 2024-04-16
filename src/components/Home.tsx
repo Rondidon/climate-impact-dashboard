@@ -1,15 +1,18 @@
 import { FunctionComponent } from "react";
+import { Link } from "react-router-dom";
+import { AppRoute } from "./routes";
+import getAssetLocation from "../utils/assetLocator";
 
 type HomeProps = {};
 
 const Home: FunctionComponent<HomeProps> = ({}) => {
   return (
     <div className="container">
-      <div className="row my-5">
+      <div className="row my-1 my-xl-5">
         <div className="col-md-6 d-flex align-items-stretch">
-          <div className="card">
+          <div className="card climate-scheme-bg-dark-grey climate-scheme-bright-text mb-4 mb-md-0">
             <img
-              src="placeholder-image-url"
+              src={getAssetLocation("co2.png", "img")}
               className="card-img-top"
               alt="CO2 Emissions"
             />
@@ -19,18 +22,18 @@ const Home: FunctionComponent<HomeProps> = ({}) => {
                 Erfahren Sie mehr über CO2, dessen Auswirkungen auf das Klima
                 und warum es wichtig ist, die Emissionen zu reduzieren.
               </p>
-              <a href="/was-ist-co2" className="btn btn-primary">
+              <Link to={AppRoute.CO2Info} className="btn climate-scheme-btn">
                 Mehr erfahren
-              </a>
+              </Link>
             </div>
           </div>
         </div>
         <div className="col-md-6 d-flex align-items-stretch">
-          <div className="card">
+          <div className="card climate-scheme-bg-dark-grey climate-scheme-bright-text">
             <img
-              src="placeholder-image-url"
+              src={getAssetLocation("participation.png", "img")}
               className="card-img-top"
-              alt="Reduce CO2"
+              alt="Reduce CO2 emmissions"
             />
             <div className="card-body">
               <h5 className="card-title">Wie kann ich beitragen?</h5>
@@ -39,14 +42,17 @@ const Home: FunctionComponent<HomeProps> = ({}) => {
                 täglichen Leben zur Reduzierung von CO2-Emissionen beitragen
                 können.
               </p>
-              <a href="/beitragen-co2-reduzieren" className="btn btn-primary">
+              <Link
+                to={AppRoute.Participation}
+                className="btn climate-scheme-btn"
+              >
                 Mehr erfahren
-              </a>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-      <div className="row my-5">
+      <div className="row my-4">
         <div className="col">
           <h2 className="mb-4">Entdecken Sie CO2 Emissionen</h2>
           <p>
@@ -55,9 +61,9 @@ const Home: FunctionComponent<HomeProps> = ({}) => {
             Sortierfunktionen, um spezifische Daten zu finden und zu
             vergleichen.
           </p>
-          <a href="/datenbank" className="btn btn-success">
+          <Link to={AppRoute.Database} className="btn climate-scheme-btn">
             Zur Datenbank
-          </a>
+          </Link>
         </div>
       </div>
     </div>

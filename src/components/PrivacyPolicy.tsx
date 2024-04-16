@@ -4,7 +4,7 @@ type PrivacyPolicyProps = {};
 
 const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
   return (
-    <>
+    <div className="container my-0 my-xl-5">
       <h1>Datenschutz&shy;erkl&auml;rung</h1>
       <h2>1. Datenschutz auf einen Blick</h2>
       <h3>Allgemeine Hinweise</h3>
@@ -292,7 +292,7 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
       <p>
         Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>
       </p>
-    </>
+    </div>
   );
 };
 
