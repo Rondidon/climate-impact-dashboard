@@ -1,124 +1,144 @@
-.climate-scheme-bg-black {
-    background-color: #010101;
+.climate-scheme-content-page {
+  font-family: Tahoma, sans-serif;
+  background-color: #272727;
+  flex-grow: 1;
+  width: 100%;
+  padding: 1.5em;
+  max-width: 1400px;
+  align-self: center;
+  box-sizing: border-box;
+  color: #f1efe9;
 }
 
-.climate-scheme-bg-content {
-    background-color: #f2f1f1;
+a:link {
+  font-family: Tahoma, sans-serif;
+  color: #eafccb;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #eafccb;
+  font-family: Tahoma, sans-serif;
+  text-decoration: none;
+}
+
+.climate-scheme-bg-black {
+  background-color: #010101;
 }
 
 .climate-scheme-bg-grey {
-    background-color: #35374f;
+  background-color: #272727;
 }
 
 .nav-link,
 .nav-link:focus {
-    font-family: Tahoma, sans-serif;
-    color: #eafccb;
-    text-decoration: none;
+  font-family: Tahoma, sans-serif;
+  color: #eafccb;
+  text-decoration: none;
 }
 
 .nav-link:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .climate-scheme-btn {
-    height: 2.5em;
-    border-radius: 0.25em;
-    color: #eafccb;
-    border: 1px solid #eafccb;
+  height: 2.5em;
+  border-radius: 0.25em;
+  color: #eafccb;
+  border: 1px solid #eafccb;
 }
 
 .climate-scheme-color-green {
-    color: #eafccb;
+  color: #eafccb;
 }
 
 .climate-scheme-btn:hover {
-    color: #ffffff;
-    border: 1px solid #ffffff;
+  color: #ffffff;
+  border: 1px solid #ffffff;
 }
 
 .climate-scheme-input-field {
-    border: 1px solid #eafccb;
-    border-radius: 0.25em;
-    padding: 0.25em 0.5em;
-    background-color: #35374f;
-    font-style: italic;
-    font-size: medium;
-    color: #ffffff;
-    height: 2.5em;
+  border: 1px solid #eafccb;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  background-color: #35374f;
+  font-style: italic;
+  font-size: medium;
+  color: #ffffff;
+  height: 2.5em;
 }
 
 .climate-scheme-input-field:focus {
-    border: 1px solid #ffffff;
-    outline: none;
+  border: 1px solid #ffffff;
+  outline: none;
 }
 
 .climate-scheme-input-field::placeholder,
 .climate-scheme-input-field:-ms-input-placeholder,
 .climate-scheme-input-field::-ms-input-placeholder {
-    color: #eafccb;
-    font-size: small;
-    opacity: 1;
+  color: #eafccb;
+  font-size: small;
+  opacity: 1;
 }
 
 .brand-logo {
-    transition: transform 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .brand-logo:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .brand-claim {
-    font-family: Tahoma, sans-serif;
-    font-size: 1.25em;
-    color: #eafccb;
+  font-family: Tahoma, sans-serif;
+  font-size: 1.25em;
+  color: #eafccb;
 }
 
 .dropdown {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .dropdown-menu {
-    background-color: #010101;
-    border: 1px solid #eafccb;
+  background-color: #010101;
+  border: 1px solid #eafccb;
 }
 
 .dropdown-item {
-    color: #eafccb;
-    background-color: #010101;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    border-top: 1px solid #010101;
-    border-bottom: 1px solid #010101;
+  color: #eafccb;
+  background-color: #010101;
+  margin-top: 1px;
+  margin-bottom: 1px;
+  border-top: 1px solid #010101;
+  border-bottom: 1px solid #010101;
 }
 
 .dropdown-item:hover {
-    color: #ffffff;
-    background-color: #222222;
-    border-top: 1px solid #222222;
-    border-bottom: 1px solid #222222;
+  color: #ffffff;
+  background-color: #222222;
+  border-top: 1px solid #222222;
+  border-bottom: 1px solid #222222;
 }
 
 .dropdown-item:active,
 .dropdown-item:focus {
-    background-color: #222222;
-    border-top: 1px solid #eafccb;
-    border-bottom: 1px solid #eafccb;
+  background-color: #222222;
+  border-top: 1px solid #eafccb;
+  border-bottom: 1px solid #eafccb;
 }
 
 .navbar-dark {
-    border: 1px solid #eafccb;
-    transition: transform 0.3s ease;
+  border: 1px solid #eafccb;
+  transition: transform 0.3s ease;
 }
 
 .navbar-dark:hover {
-    border-color: #ffffff;
-    transform: scale(1.1);
+  border-color: #ffffff;
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 991px) {
-    .dropdown-toggle {
-        padding: 0 0 1em 0;
-    }
+  .dropdown-toggle {
+    padding: 0 0 1em 0;
+  }
 }

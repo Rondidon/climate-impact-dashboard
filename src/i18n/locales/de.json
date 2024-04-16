@@ -1,38 +1,38 @@
 {
-    "translation": {
-        "common": {
-            "languages": {
-                "de": "Deutsch",
-                "en": "Englisch"
-            },
-            "actions": {
-                "search": "Suchen"
-            }
-        },
-        "claim": {
-            "part1": "ECO",
-            "part2": "TRACE"
-        },
-        "header": {
-            "languageSelector": "Sprache",
-            "searchPlaceholder": "Suchbegriff"
-        },
-        "navigation": {
-            "home": "Startseite",
-            "database": "Emissionsdatenbank",
-            "co2info": "Was ist CO2?",
-            "participation": "Was kann ich beitragen?"
-        },
-        "footer": {
-            "projectDescription": "Darstellung von CO2 Emissionen nach Land und Unternehmen.",
-            "projectContext": "Ein Projekt im Rahmen einer Fallstudie für die IU Internationale Hochschule.",
-            "legal": {
-                "header": "Rechtliches",
-                "privacy": "Datenschutzhinweis",
-                "imprint": "Impressum"
-            },
-            "linkHeader": "Übersicht",
-            "copyright": "Robin Fabian Alexander Kindler"
-        }
+  "translation": {
+    "common": {
+      "languages": {
+        "de": "Deutsch",
+        "en": "Englisch"
+      },
+      "actions": {
+        "search": "Suchen"
+      }
+    },
+    "claim": {
+      "part1": "ECO",
+      "part2": "TRACE"
+    },
+    "header": {
+      "languageSelector": "Sprache",
+      "searchPlaceholder": "Suchbegriff"
+    },
+    "navigation": {
+      "home": "Startseite",
+      "database": "Emissionsdatenbank",
+      "co2info": "Was ist CO2?",
+      "participation": "Wie kann ich beitragen?"
+    },
+    "footer": {
+      "projectDescription": "Darstellung von CO2 Emissionen nach Land und Unternehmen.",
+      "projectContext": "Ein Projekt im Rahmen einer Fallstudie für die IU Internationale Hochschule.",
+      "legal": {
+        "header": "Rechtliches",
+        "privacy": "Datenschutzhinweis",
+        "imprint": "Impressum"
+      },
+      "linkHeader": "Übersicht",
+      "copyright": "Robin Fabian Alexander Kindler"
     }
+  }
 }
