@@ -1,1 +1,10 @@
-export type AppRoute = "Home" | "Database" | "CO2Info" | "Participation" | "Imprint" | "PrivacyNote" | "SearchResults" | "404";
+export enum AppRoute { 
+    "Home" = "/", 
+    "Database" = "/database" ,
+    "CO2Info" = "/co2info", 
+    "Participation" = "/participation", 
+    "Imprint" = "/imprint", 
+    "PrivacyNote" = "/privacypolicy", 
+    "SearchResults" = "/searchresults", 
+    "NotFound" = "/404"
+}

@@ -3,6 +3,7 @@ import AppFooter from './components/AppFooter';
 import AppHeader from './components/AppHeader';
 import AppMain from './components/AppMain';
 import { AppRoute } from './components/routes';
+import { BrowserRouter } from 'react-router-dom';
 
 const appStyle: React.CSSProperties = {
   display: "flex",
@@ -13,13 +14,13 @@ const appStyle: React.CSSProperties = {
 
 function App() {
 
-  const [route, setRoute] = useState<AppRoute>("Home");
-
   return (
     <div className="App" style={appStyle}>
-      <AppHeader onChangeRoute={(route: AppRoute) => setRoute(route)}/>
-      <AppMain route={route}/>
-      <AppFooter onChangeRoute={(route: AppRoute) => setRoute(route)}/>
+      <BrowserRouter>
+        <AppHeader />
+        <AppMain />
+        <AppFooter />
+      </BrowserRouter>
     </div>
   );
 }

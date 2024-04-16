@@ -1,21 +1,32 @@
 import { FunctionComponent } from "react";
 import { useTranslation } from "react-i18next";
+import { Link, useNavigate } from "react-router-dom";
 import getAssetLocation from "../utils/assetLocator";
 import { AppRoute } from "./routes";
 
 type AppHeaderProps = {
-    onChangeRoute: (route: AppRoute) => void
 }
 
-const AppHeader: FunctionComponent<AppHeaderProps> = ({ onChangeRoute }) => {
+const AppHeader: FunctionComponent<AppHeaderProps> = ({ }) => {
 
     const { t, i18n } = useTranslation();
+    const navigate = useNavigate();
+
+    const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        navigate(AppRoute.SearchResults);
+    }
+
+    const handleLogoClick = (e: React.MouseEvent) => {
+        e.preventDefault();
+        navigate(AppRoute.Home);
+    }
 
     return (
         <header>
             <nav className="navbar navbar-expand-lg climate-scheme-bg-black">
                 <div className="container-fluid">
-                    <a className="navbar-brand brand-logo d-flex align-items-center" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ECOTRACE" onClick={(e) => { e.preventDefault(); onChangeRoute("Home"); }}>
+                    <a className="navbar-brand brand-logo d-flex align-items-center" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ECOTRACE" onClick={handleLogoClick}>
                         <img src={getAssetLocation("logo.png", "img")} alt="Bootstrap" width="48" height="52" />
                         <div className="d-inline-block d-lg-none d-xxl-block brand-claim ms-2"><strong>{t("claim.part1")}</strong>{t("claim.part2")}</div>
                     </a>
@@ -27,13 +38,13 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({ onChangeRoute }) => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link" href="#" onClick={(e) => { e.preventDefault(); onChangeRoute("Database"); }}>{t("navigation.database")}</a>
+                                <Link className="nav-link" to={AppRoute.Database}>{t("navigation.database")}</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#" onClick={(e) => { e.preventDefault(); onChangeRoute("CO2Info"); }}>{t("navigation.co2info")}</a>
+                                <Link className="nav-link" to={AppRoute.CO2Info}>{t("navigation.co2info")}</Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#" onClick={(e) => { e.preventDefault(); onChangeRoute("Participation"); }}>{t("navigation.participation")}</a>
+                                <Link className="nav-link" to={AppRoute.Participation}>{t("navigation.participation")}</Link>
                             </li>
                         </ul>
                         <li className="dropdown">
@@ -46,7 +57,7 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({ onChangeRoute }) => {
                                 <li><a onClick={(e) => { e.preventDefault(); i18n.changeLanguage("en"); }} className="dropdown-item" href="#">{t("common.languages.en")}</a></li>
                             </ul>
                         </li>
-                        <form className="d-flex" role="search" onSubmit={(e) => { e.preventDefault(); onChangeRoute("SearchResults"); }}>
+                        <form className="d-flex" role="search" onSubmit={handleSearchSubmit}>
                             <input className="climate-scheme-input-field me-2" type="search" placeholder={t("header.searchPlaceholder")} aria-label="Search" />
                             <button className="btn climate-scheme-btn" type="submit">{t("common.actions.search")}</button>
                         </form>
