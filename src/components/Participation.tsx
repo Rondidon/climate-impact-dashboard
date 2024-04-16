@@ -1,4 +1,5 @@
 import { FunctionComponent } from "react";
+import getAssetLocation from "../utils/assetLocator";
 
 type ParticipationProps = {};
 
@@ -10,9 +11,9 @@ const Participation: FunctionComponent<ParticipationProps> = ({}) => {
       </h1>
       <div className="row">
         <div className="col-lg-4 col-md-6 mb-4">
-          <div className="card h-100">
+          <div className="card h-100 climate-scheme-bg-dark-grey climate-scheme-bright-text">
             <img
-              src="placeholder-image-url"
+              src={getAssetLocation("bicycle.png", "img")}
               className="card-img-top"
               alt="Fahrrad fahren"
             />
@@ -29,9 +30,9 @@ const Participation: FunctionComponent<ParticipationProps> = ({}) => {
           </div>
         </div>
         <div className="col-lg-4 col-md-6 mb-4">
-          <div className="card h-100">
+          <div className="card h-100 climate-scheme-bg-dark-grey climate-scheme-bright-text">
             <img
-              src="placeholder-image-url"
+              src={getAssetLocation("efficiency.png", "img")}
               className="card-img-top"
               alt="Energie sparen"
             />
@@ -46,9 +47,9 @@ const Participation: FunctionComponent<ParticipationProps> = ({}) => {
           </div>
         </div>
         <div className="col-lg-4 col-md-6 mb-4">
-          <div className="card h-100">
+          <div className="card h-100 climate-scheme-bg-dark-grey climate-scheme-bright-text">
             <img
-              src="placeholder-image-url"
+              src={getAssetLocation("recycling.png", "img")}
               className="card-img-top"
               alt="Wiederverwenden und recyceln"
             />

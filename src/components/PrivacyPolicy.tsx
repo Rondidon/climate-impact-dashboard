@@ -5,9 +5,13 @@ type PrivacyPolicyProps = {};
 const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
   return (
     <div className="container my-0 my-xl-5">
-      <h1>Datenschutz&shy;erkl&auml;rung</h1>
-      <h2>1. Datenschutz auf einen Blick</h2>
-      <h3>Allgemeine Hinweise</h3>
+      <h1>
+        Datenschutz&shy;erkl&auml;rung
+        <br />
+        <br />
+      </h1>
+      <h3>1. Datenschutz auf einen Blick</h3>
+      <h4>Allgemeine Hinweise</h4>
       <p>
         Die folgenden Hinweise geben einen einfachen &Uuml;berblick
         dar&uuml;ber, was mit Ihren personenbezogenen Daten passiert, wenn Sie
@@ -16,17 +20,17 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         Ausf&uuml;hrliche Informationen zum Thema Datenschutz entnehmen Sie
         unserer unter diesem Text aufgef&uuml;hrten Datenschutzerkl&auml;rung.
       </p>
-      <h3>Datenerfassung auf dieser Website</h3>
-      <h4>
+      <h4>Datenerfassung auf dieser Website</h4>
+      <h5>
         Wer ist verantwortlich f&uuml;r die Datenerfassung auf dieser Website?
-      </h4>
+      </h5>
       <p>
         Die Datenverarbeitung auf dieser Website erfolgt durch den
         Websitebetreiber. Dessen Kontaktdaten k&ouml;nnen Sie dem Abschnitt
         &bdquo;Hinweis zur Verantwortlichen Stelle&ldquo; in dieser
         Datenschutzerkl&auml;rung entnehmen.
       </p>
-      <h4>Wie erfassen wir Ihre Daten?</h4>
+      <h5>Wie erfassen wir Ihre Daten?</h5>
       <p>
         Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese
         mitteilen. Hierbei kann es sich z.&nbsp;B. um Daten handeln, die Sie in
@@ -39,13 +43,13 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         Uhrzeit des Seitenaufrufs). Die Erfassung dieser Daten erfolgt
         automatisch, sobald Sie diese Website betreten.
       </p>
-      <h4>Wof&uuml;r nutzen wir Ihre Daten?</h4>
+      <h5>Wof&uuml;r nutzen wir Ihre Daten?</h5>
       <p>
         Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung der
         Website zu gew&auml;hrleisten. Andere Daten k&ouml;nnen zur Analyse
         Ihres Nutzerverhaltens verwendet werden.
       </p>
-      <h4>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</h4>
+      <h5>Welche Rechte haben Sie bez&uuml;glich Ihrer Daten?</h5>
       <p>
         Sie haben jederzeit das Recht, unentgeltlich Auskunft &uuml;ber
         Herkunft, Empf&auml;nger und Zweck Ihrer gespeicherten personenbezogenen
@@ -62,8 +66,8 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         Hierzu sowie zu weiteren Fragen zum Thema Datenschutz k&ouml;nnen Sie
         sich jederzeit an uns wenden.
       </p>
-      <h2>2. Allgemeine Hinweise und Pflicht&shy;informationen</h2>
-      <h3>Datenschutz</h3>
+      <h3>2. Allgemeine Hinweise und Pflicht&shy;informationen</h3>
+      <h4>Datenschutz</h4>
       <p>
         Die Betreiber dieser Seiten nehmen den Schutz Ihrer pers&ouml;nlichen
         Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich
@@ -84,7 +88,7 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         aufweisen kann. Ein l&uuml;ckenloser Schutz der Daten vor dem Zugriff
         durch Dritte ist nicht m&ouml;glich.
       </p>
-      <h3>Hinweis zur verantwortlichen Stelle</h3>
+      <h4>Hinweis zur verantwortlichen Stelle</h4>
       <p>
         Die verantwortliche Stelle f&uuml;r die Datenverarbeitung auf dieser
         Website ist:
@@ -107,7 +111,7 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         der Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen, E-Mail-
         Adressen o. &Auml;.) entscheidet.
       </p>
-      <h3>Speicherdauer</h3>
+      <h4>Speicherdauer</h4>
       <p>
         Soweit innerhalb dieser Datenschutzerkl&auml;rung keine speziellere
         Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten bei
@@ -120,10 +124,10 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         letztgenannten Fall erfolgt die L&ouml;schung nach Fortfall dieser
         Gr&uuml;nde.
       </p>
-      <h3>
+      <h4>
         Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung auf
         dieser Website
-      </h3>
+      </h4>
       <p>
         Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten wir
         Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1 lit. a
@@ -147,7 +151,7 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         Rechtsgrundlagen wird in den folgenden Abs&auml;tzen dieser
         Datenschutzerkl&auml;rung informiert.
       </p>
-      <h3>Empfänger von personenbezogenen Daten</h3>
+      <h4>Empfänger von personenbezogenen Daten</h4>
       <p>
         Im Rahmen unserer Gesch&auml;ftst&auml;tigkeit arbeiten wir mit
         verschiedenen externen Stellen zusammen. Dabei ist teilweise auch eine
@@ -164,7 +168,7 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         einer gemeinsamen Verarbeitung wird ein Vertrag &uuml;ber gemeinsame
         Verarbeitung geschlossen.
       </p>
-      <h3>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h3>
+      <h4>Widerruf Ihrer Einwilligung zur Datenverarbeitung</h4>
       <p>
         Viele Datenverarbeitungsvorg&auml;nge sind nur mit Ihrer
         ausdr&uuml;cklichen Einwilligung m&ouml;glich. Sie k&ouml;nnen eine
@@ -172,10 +176,10 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         Rechtm&auml;&szlig;igkeit der bis zum Widerruf erfolgten
         Datenverarbeitung bleibt vom Widerruf unber&uuml;hrt.
       </p>
-      <h3>
+      <h4>
         Widerspruchsrecht gegen die Datenerhebung in besonderen F&auml;llen
         sowie gegen Direktwerbung (Art. 21 DSGVO)
-      </h3>
+      </h4>
       <p>
         WENN DIE DATENVERARBEITUNG AUF GRUNDLAGE VON ART. 6 ABS. 1 LIT. E ODER F
         DSGVO ERFOLGT, HABEN SIE JEDERZEIT DAS RECHT, AUS GR&Uuml;NDEN, DIE SICH
@@ -201,9 +205,9 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         MEHR ZUM ZWECKE DER DIREKTWERBUNG VERWENDET (WIDERSPRUCH NACH ART. 21
         ABS. 2 DSGVO).
       </p>
-      <h3>
+      <h4>
         Beschwerde&shy;recht bei der zust&auml;ndigen Aufsichts&shy;beh&ouml;rde
-      </h3>
+      </h4>
       <p>
         Im Falle von Verst&ouml;&szlig;en gegen die DSGVO steht den Betroffenen
         ein Beschwerderecht bei einer Aufsichtsbeh&ouml;rde, insbesondere in dem
@@ -212,7 +216,7 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         Beschwerderecht besteht unbeschadet anderweitiger verwaltungsrechtlicher
         oder gerichtlicher Rechtsbehelfe.
       </p>
-      <h3>Recht auf Daten&shy;&uuml;bertrag&shy;barkeit</h3>
+      <h4>Recht auf Daten&shy;&uuml;bertrag&shy;barkeit</h4>
       <p>
         Sie haben das Recht, Daten, die wir auf Grundlage Ihrer Einwilligung
         oder in Erf&uuml;llung eines Vertrags automatisiert verarbeiten, an sich
@@ -221,7 +225,7 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         Daten an einen anderen Verantwortlichen verlangen, erfolgt dies nur,
         soweit es technisch machbar ist.
       </p>
-      <h3>Auskunft, Berichtigung und L&ouml;schung</h3>
+      <h4>Auskunft, Berichtigung und L&ouml;schung</h4>
       <p>
         Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen jederzeit
         das Recht auf unentgeltliche Auskunft &uuml;ber Ihre gespeicherten
@@ -230,7 +234,7 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         L&ouml;schung dieser Daten. Hierzu sowie zu weiteren Fragen zum Thema
         personenbezogene Daten k&ouml;nnen Sie sich jederzeit an uns wenden.
       </p>
-      <h3>Recht auf Einschr&auml;nkung der Verarbeitung</h3>
+      <h4>Recht auf Einschr&auml;nkung der Verarbeitung</h4>
       <p>
         Sie haben das Recht, die Einschr&auml;nkung der Verarbeitung Ihrer
         personenbezogenen Daten zu verlangen. Hierzu k&ouml;nnen Sie sich
@@ -274,7 +278,7 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         wichtigen &ouml;ffentlichen Interesses der Europ&auml;ischen Union oder
         eines Mitgliedstaats verarbeitet werden.
       </p>
-      <h3>SSL- bzw. TLS-Verschl&uuml;sselung</h3>
+      <h4>SSL- bzw. TLS-Verschl&uuml;sselung</h4>
       <p>
         Diese Seite nutzt aus Sicherheitsgr&uuml;nden und zum Schutz der
         &Uuml;bertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen
