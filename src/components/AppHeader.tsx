@@ -1,12 +1,13 @@
 import { FunctionComponent } from "react";
-import getAssetLocation from "../utils/assetLocator";
 import { useTranslation } from "react-i18next";
+import getAssetLocation from "../utils/assetLocator";
+import { AppRoute } from "./routes";
 
 type AppHeaderProps = {
-
+    onChangeRoute: (route: AppRoute) => void
 }
 
-const AppHeader: FunctionComponent<AppHeaderProps> = ({ }) => {
+const AppHeader: FunctionComponent<AppHeaderProps> = ({ onChangeRoute }) => {
 
     const { t, i18n } = useTranslation();
 
@@ -14,7 +15,7 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({ }) => {
         <header>
             <nav className="navbar navbar-expand-lg climate-scheme-bg-black">
                 <div className="container-fluid">
-                    <a className="navbar-brand brand-logo d-flex align-items-center" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ECOTRACE">
+                    <a className="navbar-brand brand-logo d-flex align-items-center" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="ECOTRACE" onClick={(e) => { e.preventDefault(); onChangeRoute("Home"); }}>
                         <img src={getAssetLocation("logo.png", "img")} alt="Bootstrap" width="48" height="52" />
                         <div className="d-inline-block d-lg-none d-xxl-block brand-claim ms-2"><strong>{t("claim.part1")}</strong>{t("claim.part2")}</div>
                     </a>
@@ -26,13 +27,13 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({ }) => {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item">
-                                <a className="nav-link" href="#">{t("navigation.database")}</a>
+                                <a className="nav-link" href="#" onClick={(e) => { e.preventDefault(); onChangeRoute("Database"); }}>{t("navigation.database")}</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">{t("navigation.co2info")}</a>
+                                <a className="nav-link" href="#" onClick={(e) => { e.preventDefault(); onChangeRoute("CO2Info"); }}>{t("navigation.co2info")}</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">{t("navigation.participation")}</a>
+                                <a className="nav-link" href="#" onClick={(e) => { e.preventDefault(); onChangeRoute("Participation"); }}>{t("navigation.participation")}</a>
                             </li>
                         </ul>
                         <li className="dropdown">
@@ -45,7 +46,7 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({ }) => {
                                 <li><a onClick={(e) => { e.preventDefault(); i18n.changeLanguage("en"); }} className="dropdown-item" href="#">{t("common.languages.en")}</a></li>
                             </ul>
                         </li>
-                        <form className="d-flex" role="search">
+                        <form className="d-flex" role="search" onSubmit={(e) => { e.preventDefault(); onChangeRoute("SearchResults"); }}>
                             <input className="climate-scheme-input-field me-2" type="search" placeholder={t("header.searchPlaceholder")} aria-label="Search" />
                             <button className="btn climate-scheme-btn" type="submit">{t("common.actions.search")}</button>
                         </form>

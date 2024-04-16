@@ -1,9 +1,8 @@
 import { FunctionComponent } from "react";
-
-export type MainRoute = "Home" | "Database" | "404";
+import { AppRoute } from "./routes";
 
 type AppMainProps = {
-    route: MainRoute;
+    route: AppRoute;
 };
 
 const mainSectionStyle: React.CSSProperties = {
@@ -12,7 +11,6 @@ const mainSectionStyle: React.CSSProperties = {
 } 
 
 const AppMain: FunctionComponent<AppMainProps> = ({ route }) => {
-    // Beispielhafte Nutzung des 'route'-Props
     return (
         <main style={mainSectionStyle}>
             <h1>Current Route: {route}</h1>

@@ -1,12 +1,13 @@
 import { FunctionComponent } from "react";
 import getAssetLocation from "../utils/assetLocator";
 import { useTranslation } from "react-i18next";
+import { AppRoute } from "./routes";
 
 type AppFooterProps = {
-
+    onChangeRoute: (route: AppRoute) => void
 }
 
-const AppFooter: FunctionComponent<AppFooterProps> = ({ }) => {
+const AppFooter: FunctionComponent<AppFooterProps> = ({ onChangeRoute }) => {
     const {t} = useTranslation();
 
     return (
@@ -32,16 +33,16 @@ const AppFooter: FunctionComponent<AppFooterProps> = ({ }) => {
                                 {t("footer.linkHeader")}
                             </h6>
                             <p>
-                                <a href="#!" className="text-reset">{t("navigation.home")}</a>
+                                <a href="#!" className="text-reset" onClick={(e) => { e.preventDefault(); onChangeRoute("Home"); }}>{t("navigation.home")}</a>
                             </p>
                             <p>
-                                <a href="#!" className="text-reset">{t("navigation.database")}</a>
+                                <a href="#!" className="text-reset" onClick={(e) => { e.preventDefault(); onChangeRoute("Database"); }}>{t("navigation.database")}</a>
                             </p>
                             <p>
-                                <a href="#!" className="text-reset">{t("navigation.co2info")}</a>
+                                <a href="#!" className="text-reset" onClick={(e) => { e.preventDefault(); onChangeRoute("CO2Info"); }}>{t("navigation.co2info")}</a>
                             </p>
                             <p>
-                                <a href="#!" className="text-reset">{t("navigation.participation")}</a>
+                                <a href="#!" className="text-reset" onClick={(e) => { e.preventDefault(); onChangeRoute("Participation"); }}>{t("navigation.participation")}</a>
                             </p>
                         </div>
 
@@ -50,10 +51,10 @@ const AppFooter: FunctionComponent<AppFooterProps> = ({ }) => {
                                 {t("footer.legal.header")}
                             </h6>
                             <p>
-                                {t("footer.legal.imprint")}
+                                <a onClick={(e) => { e.preventDefault(); onChangeRoute("Imprint"); }} href="#!" className="text-reset">{t("footer.legal.imprint")}</a>
                             </p>
                             <p>
-                                <a href="#!" className="text-reset">{t("footer.legal.privacy")}</a>
+                                <a onClick={(e) => { e.preventDefault(); onChangeRoute("PrivacyNote"); }} href="#!" className="text-reset">{t("footer.legal.privacy")}</a>
                             </p>
                         </div>
                     </div>
@@ -61,7 +62,7 @@ const AppFooter: FunctionComponent<AppFooterProps> = ({ }) => {
             </section>
 
             <div className="text-center p-4 climate-scheme-color-green">
-                © {t("footer.copyright")}
+                © 2024 {t("footer.copyright")}
             </div>
         </footer>
     )
