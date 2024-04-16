@@ -13,11 +13,17 @@ const appStyle: React.CSSProperties = {
 };
 
 function App() {
+  const [searchQuery, setSearchQuery] = useState<string | undefined>(undefined);
   return (
     <div className="App climate-scheme-bg-grey" style={appStyle}>
       <BrowserRouter>
-        <AppHeader />
-        <AppMain />
+        <AppHeader
+          searchQuery={searchQuery}
+          onSetSearchQuery={(query: string | undefined) =>
+            setSearchQuery(query)
+          }
+        />
+        <AppMain searchQuery={searchQuery} />
         <AppFooter />
       </BrowserRouter>
     </div>

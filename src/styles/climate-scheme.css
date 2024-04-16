@@ -57,6 +57,10 @@ a:visited {
   border: 1px solid #eafccb;
 }
 
+.climate-scheme-btn:disabled {
+  color: #eafccbb0;
+}
+
 .climate-scheme-color-green {
   color: #eafccb;
 }

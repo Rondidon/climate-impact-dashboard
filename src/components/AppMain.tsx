@@ -1,4 +1,4 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import CO2Info from "./CO2Info";
 import DatabaseViewer from "./DatabaseViewer";
@@ -10,9 +10,11 @@ import PrivacyPolicy from "./PrivacyPolicy";
 import SearchResults from "./SearchResults";
 import { AppRoute } from "./routes";
 
-type AppMainProps = {};
+type AppMainProps = {
+  searchQuery?: string;
+};
 
-const AppMain: FunctionComponent<AppMainProps> = ({}) => {
+const AppMain: FunctionComponent<AppMainProps> = ({ searchQuery }) => {
   return (
     <div className="climate-scheme-content-page">
       <Routes>
@@ -22,7 +24,10 @@ const AppMain: FunctionComponent<AppMainProps> = ({}) => {
         <Route path={AppRoute.Imprint} element={<Imprint />} />
         <Route path={AppRoute.Participation} element={<Participation />} />
         <Route path={AppRoute.PrivacyNote} element={<PrivacyPolicy />} />
-        <Route path={AppRoute.SearchResults} element={<SearchResults />} />
+        <Route
+          path={AppRoute.SearchResults}
+          element={<SearchResults searchQuery={searchQuery} />}
+        />
         {/* Wildcard / 404 */}
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
