@@ -83,6 +83,7 @@ const CO2Info: FunctionComponent<CO2InfoProps> = ({}) => {
             <div className="accordion-body">{t("routes.co2info.faq.a3")}</div>
           </div>
         </div>
+        s{" "}
       </div>
     </div>
   );
