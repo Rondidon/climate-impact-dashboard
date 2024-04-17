@@ -119,9 +119,9 @@ const SearchResults: FunctionComponent<SearchResultsProps> = ({
     );
   }
   return (
-    <div>
+    <div className="container row my-1 my-xl-5">
       <h1>{t("routes.searchresults.title")}</h1>
-      <div className="container">
+      <div className="mt-3">
         {searchResults && searchResults.length > 0 ? (
           searchResults.map((result, index) => (
             <Link
