@@ -1,10 +1,13 @@
-const NotFoundPage = () => {
-    return (
-      <div>
-        <h1>404 - Seite nicht gefunden</h1>
-        <p>Die angeforderte Seite konnte nicht gefunden werden.</p>
-      </div>
-    );
-  };
+import { useTranslation } from "react-i18next";
 
-  export default NotFoundPage;
+const NotFoundPage = () => {
+  const { t } = useTranslation();
+  return (
+    <>
+      <h1>{t("routes.404.title")}</h1>
+      <p>{t("routes.404.text")}</p>
+    </>
+  );
+};
+
+export default NotFoundPage;

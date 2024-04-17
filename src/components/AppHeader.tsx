@@ -2,11 +2,11 @@ import { FunctionComponent, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useNavigate } from "react-router-dom";
 import getAssetLocation from "../utils/assetLocator";
-import { AppRoute } from "./routes";
+import { AppRoute } from "./appRoute";
 
 type AppHeaderProps = {
-  onSetSearchQuery: (searchQuery: string | undefined) => void;
-  searchQuery: string | undefined;
+  onSetSearchQuery: (searchQuery: string) => void;
+  searchQuery: string;
 };
 
 const AppHeader: FunctionComponent<AppHeaderProps> = ({
@@ -19,15 +19,21 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
     searchQuery ? searchQuery : ""
   );
 
+  const co2InfoRoute: AppRoute = "/co2info";
+  const participationRoute: AppRoute = "/participation";
+  const databaseRoute: AppRoute = "/co2info";
+  const homeRoute: AppRoute = "/";
+  const searchResultsRoute: AppRoute = "/searchresults";
+
   const handleSearchSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     onSetSearchQuery(searchInputFieldValue);
-    navigate(AppRoute.SearchResults);
+    navigate(searchResultsRoute);
   };
 
   const handleLogoClick = (e: React.MouseEvent) => {
     e.preventDefault();
-    navigate(AppRoute.Home);
+    navigate(homeRoute);
   };
 
   return (
@@ -57,7 +63,7 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
             className="navbar-toggler navbar-dark"
             type="button"
             data-bs-toggle="collapse"
-            data-bs-target="#navbarSuppor  const [searchQuery, setSearchQuery] = useState<string | undefined>(undefined);tedContent"
+            data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent"
             aria-expanded="false"
             aria-label="Toggle navigation"
@@ -68,17 +74,17 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <Link className="nav-link" to={AppRoute.Database}>
+                <Link className="nav-link" to={databaseRoute}>
                   {t("navigation.database")}
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to={AppRoute.CO2Info}>
+                <Link className="nav-link" to={co2InfoRoute}>
                   {t("navigation.co2info")}
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to={AppRoute.Participation}>
+                <Link className="nav-link" to={participationRoute}>
                   {t("navigation.participation")}
                 </Link>
               </li>

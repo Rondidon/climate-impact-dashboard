@@ -6,7 +6,9 @@
         "en": "Englisch"
       },
       "actions": {
-        "search": "Suchen"
+        "search": "Suchen",
+        "readmore": "Mehr erfahren",
+        "databaselink": "Zur Datenbank"
       }
     },
     "claim": {
@@ -15,7 +17,7 @@
     },
     "header": {
       "languageSelector": "Sprache",
-      "searchPlaceholder": "Suchbegriff"
+      "searchPlaceholder": "CO2..."
     },
     "navigation": {
       "home": "Startseite",
@@ -33,6 +35,60 @@
       },
       "linkHeader": "Übersicht",
       "copyright": "Robin Fabian Alexander Kindler"
+    },
+    "routes": {
+      "home": {
+        "co2info": {
+          "text": "Erfahren Sie mehr über CO2, dessen Auswirkungen auf das Klima und warum es wichtig ist, die Emissionen zu reduzieren.",
+          "title": "Was ist CO2?"
+        },
+        "participation": {
+          "title": "Wie kann ich beitragen?",
+          "text": "Entdecken Sie, wie Sie durch einfache Änderungen in Ihrem täglichen Leben zur Reduzierung von CO2-Emissionen beitragen können."
+        },
+        "title": "Entdecken Sie CO2 Emissionen",
+        "text": "Tauchen Sie ein in unsere Datenbank und erkunden Sie CO2-Emissionen nach Ländern und Unternehmen. Nutzen Sie unsere Such- und Sortierfunktionen, um spezifische Daten zu finden und zu vergleichen."
+      },
+      "co2info": {
+        "title": "Was ist CO2?",
+        "text1": "Kohlendioxid (CO2) ist ein farbloses, geruchloses Gas, das natürlich in der Erdatmosphäre vorkommt. Es spielt eine entscheidende Rolle im natürlichen Treibhauseffekt und trägt dazu bei, die Erde bewohnbar zu machen. Allerdings führen menschliche Aktivitäten, insbesondere die Verbrennung fossiler Brennstoffe und die Abholzung, zu einem Anstieg der CO2-Konzentration in der Atmosphäre, was den Treibhauseffekt verstärkt und den Klimawandel antreibt.",
+        "text2": "Die Reduzierung der CO2-Emissionen ist entscheidend, um die schlimmsten Auswirkungen des Klimawandels zu vermeiden. Dies kann durch Energieeffizienz, den Umstieg auf erneuerbare Energiequellen, die Aufforstung und viele andere Maßnahmen erreicht werden.",
+        "faq": {
+          "q1": "Warum ist CO2 ein Problem für das Klima?",
+          "a1": "CO2 (Kohlendioxid) ist ein Treibhausgas, das zur Erwärmung der Erdatmosphäre beiträgt. Obwohl CO2 auf natürliche Weise vorkommt und ein wichtiger Bestandteil des Erdklimasystems ist, hat die durch menschliche Aktivitäten verursachte Zunahme der CO2-Emissionen, vor allem durch die Verbrennung fossiler Brennstoffe und Abholzung, zu einem unnatürlichen Anstieg der Konzentration dieses Gases in der Atmosphäre geführt. Dies verstärkt den Treibhauseffekt, führt zu einer globalen Erwärmung und hat weitreichende Auswirkungen auf das Klima.",
+          "q2": "Wie kann ich meinen CO2-Fußabdruck verringern?",
+          "a2": "Jeder kann dazu beitragen, seinen CO2-Fußabdruck zu verringern, indem er bewusstere Entscheidungen im täglichen Leben trifft. Einige Maßnahmen umfassen die Reduzierung des Energieverbrauchs zu Hause durch effizientere Geräte und bessere Isolierung, die Nutzung öffentlicher Verkehrsmittel oder Fahrradfahren anstelle des Autofahrens, den Wechsel zu erneuerbaren Energiequellen, wie z.B. Solar- oder Windenergie, für Ihr Zuhause, die Reduzierung des Konsums von tierischen Produkten und die Unterstützung von Unternehmen, die nachhaltige Praktiken fördern.",
+          "q3": "Was sind die Vorteile der Reduzierung von CO2-Emissionen?",
+          "a3": "Die Verringerung der CO2-Emissionen hat zahlreiche Vorteile, nicht nur für das Klima, sondern auch für die Gesundheit, die Wirtschaft und die Umwelt im Allgemeinen. Zu den positiven Auswirkungen gehören eine verbesserte Luftqualität, die Verringerung von gesundheitsschädlichen Luftverschmutzungen, die Stärkung der Wirtschaft durch die Schaffung von Arbeitsplätzen im Bereich der erneuerbaren Energien, die Verringerung der Abhängigkeit von fossilen Brennstoffen und damit verbundenen Energiekosten sowie der Schutz von Ökosystemen und Artenvielfalt, die durch den Klimawandel bedroht sind."
+        }
+      },
+      "participation": {
+        "title": "Wie kann ich beitragen zur CO2-Reduktion?",
+        "text": "Jeder Beitrag zählt, wenn es darum geht, die CO2-Emissionen zu reduzieren. Durch bewusste Entscheidungen im Alltag können wir gemeinsam einen Unterschied machen. Beginnen Sie heute, für eine nachhaltigere Zukunft.",
+        "element1": {
+          "title": "Öffentliche Verkehrsmittel und Fahrradfahren",
+          "text": "Nutzen Sie wo möglich öffentliche Verkehrsmittel oder das Fahrrad für Ihre täglichen Wege. Dies verringert nicht nur den CO2-Ausstoß, sondern fördert auch Ihre Gesundheit."
+        },
+        "element2": {
+          "title": "Energieeffizienz steigern",
+          "text": "Achten Sie auf den Energieverbrauch Ihrer Haushaltsgeräte und bevorzugen Sie energieeffiziente Produkte. Das spart nicht nur Kosten, sondern schützt auch die Umwelt."
+        },
+        "element3": {
+          "title": "Recycling und Wiederverwendung",
+          "text": "Fördern Sie die Wiederverwendung von Produkten und beteiligen Sie sich aktiv am Recycling, um die Produktion von Abfällen zu minimieren und Ressourcen zu schonen."
+        }
+      },
+      "404": {
+        "title": "404 - Seite nicht gefunden",
+        "text": "Die angeforderte Seite konnte nicht gefunden werden."
+      },
+      "imprint": {},
+      "privacypolicy": {},
+      "databaseviewer": {},
+      "searchresults": {
+        "title": "Suchergebnisse",
+        "noresultsfound": "Keine Ergebnisse gefunden."
+      }
     }
   }
 }

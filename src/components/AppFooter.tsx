@@ -2,7 +2,15 @@ import { FunctionComponent } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import getAssetLocation from "../utils/assetLocator";
-import { AppRoute } from "./routes";
+import {
+  AppRoute,
+  co2InfoRoute,
+  databaseRoute,
+  homeRoute,
+  imprintRoute,
+  participationRoute,
+  privacyRoute,
+} from "./appRoute";
 
 type AppFooterProps = {};
 
@@ -34,22 +42,22 @@ const AppFooter: FunctionComponent<AppFooterProps> = ({}) => {
                 {t("footer.linkHeader")}
               </h6>
               <p>
-                <Link className="nav-link" to={AppRoute.Home}>
+                <Link className="nav-link" to={homeRoute}>
                   {t("navigation.home")}
                 </Link>
               </p>
               <p>
-                <Link className="nav-link" to={AppRoute.Database}>
+                <Link className="nav-link" to={databaseRoute}>
                   {t("navigation.database")}
                 </Link>
               </p>
               <p>
-                <Link className="nav-link" to={AppRoute.CO2Info}>
+                <Link className="nav-link" to={co2InfoRoute}>
                   {t("navigation.co2info")}
                 </Link>
               </p>
               <p>
-                <Link className="nav-link" to={AppRoute.Participation}>
+                <Link className="nav-link" to={participationRoute}>
                   {t("navigation.participation")}
                 </Link>
               </p>
@@ -60,12 +68,12 @@ const AppFooter: FunctionComponent<AppFooterProps> = ({}) => {
                 {t("footer.legal.header")}
               </h6>
               <p>
-                <Link className="nav-link" to={AppRoute.Imprint}>
+                <Link className="nav-link" to={imprintRoute}>
                   {t("footer.legal.imprint")}
                 </Link>
               </p>
               <p>
-                <Link className="nav-link" to={AppRoute.PrivacyNote}>
+                <Link className="nav-link" to={privacyRoute}>
                   {t("footer.legal.privacy")}
                 </Link>
               </p>

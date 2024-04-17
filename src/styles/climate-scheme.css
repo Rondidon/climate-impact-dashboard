@@ -50,6 +50,19 @@ a:visited {
   color: #ffffff;
 }
 
+.climate-scheme-card-btn {
+  border-radius: 0.25em;
+  color: #eafccb;
+  border: 1px solid #eafccb;
+  transition: transform 0.3s ease;
+}
+
+.climate-scheme-card-btn:hover {
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  transform: scale(1.005);
+}
+
 .climate-scheme-btn {
   height: 2.5em;
   border-radius: 0.25em;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import AppFooter from "./components/AppFooter";
 import AppHeader from "./components/AppHeader";
 import AppMain from "./components/AppMain";
-import { AppRoute } from "./components/routes";
+import { AppRoute } from "./components/appRoute";
 import { BrowserRouter } from "react-router-dom";
 
 const appStyle: React.CSSProperties = {
@@ -13,15 +13,13 @@ const appStyle: React.CSSProperties = {
 };
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState<string | undefined>(undefined);
+  const [searchQuery, setSearchQuery] = useState<string>("");
   return (
     <div className="App climate-scheme-bg-grey" style={appStyle}>
       <BrowserRouter>
         <AppHeader
           searchQuery={searchQuery}
-          onSetSearchQuery={(query: string | undefined) =>
-            setSearchQuery(query)
-          }
+          onSetSearchQuery={(query: string) => setSearchQuery(query)}
         />
         <AppMain searchQuery={searchQuery} />
         <AppFooter />

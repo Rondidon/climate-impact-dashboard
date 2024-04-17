@@ -1,38 +1,94 @@
 {
-    "translation": {
-        "common": {
-            "languages": {
-                "de": "German",
-                "en": "English"
-            },
-            "actions": {
-                "search": "Search"
-            }
+  "translation": {
+    "common": {
+      "languages": {
+        "de": "German",
+        "en": "English"
+      },
+      "actions": {
+        "search": "Search",
+        "readmore": "Read more",
+        "databaselink": "Open database"
+      }
+    },
+    "claim": {
+      "part1": "ECO",
+      "part2": "TRACE"
+    },
+    "header": {
+      "languageSelector": "Language",
+      "searchPlaceholder": "CO2..."
+    },
+    "navigation": {
+      "home": "Home",
+      "database": "Emissions Database",
+      "co2info": "What is CO2?",
+      "participation": "What can I contribute?"
+    },
+    "footer": {
+      "projectDescription": "Presentation of CO2 emissions by country and company.",
+      "projectContext": "A project within the context of a case study for the IU International University.",
+      "legal": {
+        "header": "Legal",
+        "privacy": "Privacy Notice",
+        "imprint": "Imprint"
+      },
+      "linkHeader": "Links",
+      "copyright": "Robin Fabian Alexander Kindler"
+    },
+    "routes": {
+      "home": {
+        "co2info": {
+          "text": "Learn more about CO2, its effects on the climate, and why it is important to reduce emissions.",
+          "title": "What is CO2?"
         },
-        "claim": {
-            "part1": "ECO",
-            "part2": "TRACE"
+        "participation": {
+          "title": "How can I contribute?",
+          "text": "Discover how you can help reduce CO2 emissions through simple changes in your daily life."
         },
-        "header": {
-            "languageSelector": "Language",
-            "searchPlaceholder": "Search term"
-        },
-        "navigation": {
-            "home": "Home",
-            "database": "Emissions Database",
-            "co2info": "What is CO2?",
-            "participation": "What can I contribute?"
-        },
-        "footer": {
-            "projectDescription": "Presentation of CO2 emissions by country and company.",
-            "projectContext": "A project within the context of a case study for the IU International University.",
-            "legal": {
-                "header": "Legal",
-                "privacy": "Privacy Notice",
-                "imprint": "Imprint"
-            },
-            "linkHeader": "Links",
-            "copyright": "Robin Fabian Alexander Kindler"
+        "title": "Explore CO2 Emissions",
+        "text": "Dive into our database and explore CO2 emissions by countries and companies. Use our search and sorting features to find and compare specific data."
+      },
+      "co2info": {
+        "title": "What is CO2?",
+        "text1": "Carbon dioxide (CO2) is a colorless, odorless gas that occurs naturally in the Earth's atmosphere. It plays a crucial role in the natural greenhouse effect and helps make the Earth habitable. However, human activities, especially the burning of fossil fuels and deforestation, lead to an increase in the concentration of CO2 in the atmosphere, which intensifies the greenhouse effect and drives climate change.",
+        "text2": "Reducing CO2 emissions is crucial to avoiding the worst impacts of climate change. This can be achieved through energy efficiency, switching to renewable energy sources, reforestation, and many other measures.",
+        "faq": {
+          "q1": "Why is CO2 a problem for the climate?",
+          "a1": "CO2 (carbon dioxide) is a greenhouse gas that contributes to the warming of the Earth's atmosphere. Although CO2 occurs naturally and is an important component of the Earth's climate system, the increase in CO2 emissions caused by human activities, especially through the burning of fossil fuels and deforestation, has led to an unnatural rise in the concentration of this gas in the atmosphere. This intensifies the greenhouse effect, leads to global warming, and has far-reaching impacts on the climate.",
+          "q2": "How can I reduce my CO2 footprint?",
+          "a2": "Everyone can contribute to reducing their CO2 footprint by making more conscious decisions in daily life. Some measures include reducing energy consumption at home through more efficient appliances and better insulation, using public transport or cycling instead of driving, switching to renewable energy sources such as solar or wind energy for your home, reducing the consumption of animal products, and supporting companies that promote sustainable practices.",
+          "q3": "What are the benefits of reducing CO2 emissions?",
+          "a3": "Reducing CO2 emissions has numerous benefits, not only for the climate but also for health, the economy, and the environment at large. Positive impacts include improved air quality, reduction of health-harmful air pollutants, strengthening of the economy through the creation of jobs in the renewable energy sector, reduction of dependency on fossil fuels and associated energy costs, and the protection of ecosystems and biodiversity threatened by climate change."
         }
+      },
+      "participation": {
+        "title": "How can I contribute to reducing CO2 emissions?",
+        "text": "Every contribution counts when it comes to reducing CO2 emissions. By making conscious choices in our everyday lives, we can make a difference together. Start today, for a more sustainable future.",
+        "element1": {
+          "title": "Public transport and cycling",
+          "text": "Where possible, use public transport or the bicycle for your daily commute. This not only reduces CO2 emissions, but also promotes your health."
+        },
+        "element2": {
+          "title": "Increase energy efficiency",
+          "text": "Pay attention to the energy consumption of your household appliances and give preference to energy-efficient products. This not only saves costs, but also protects the environment."
+        },
+        "element3": {
+          "title": "Recycling and reuse",
+          "text": "Promote the reuse of products and actively participate in recycling to minimize the production of waste and conserve resources."
+        }
+      },
+      "404": {
+        "title": "404 - Page not found",
+        "text": "The requested page could not be found."
+      },
+      "imprint": {},
+      "privacypolicy": {},
+      "databaseviewer": {},
+      "searchresults": {
+        "title": "Search results",
+        "noresultsfound": "No results found."
+      }
     }
+  }
 }
