@@ -21,7 +21,7 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
 
   const co2InfoRoute: AppRoute = "/co2info";
   const participationRoute: AppRoute = "/participation";
-  const databaseRoute: AppRoute = "/co2info";
+  const databaseRoute: AppRoute = "/database";
   const homeRoute: AppRoute = "/";
   const searchResultsRoute: AppRoute = "/searchresults";
 
