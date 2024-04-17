@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 const countryCsv = `${process.env.PUBLIC_URL}/data/countries.csv`;
 const companyCsv = `${process.env.PUBLIC_URL}/data/companies.csv`;
 
-type CountryData = {
+export type CountryData = {
   countryId: string;
   countryName: string;
   co2_2015: number;
@@ -18,7 +18,7 @@ type CountryData = {
   co2_2023: number;
 };
 
-type CompanyData = {
+export type CompanyData = {
   companyId: string;
   companyName: string;
   countryId: string;
@@ -50,29 +50,27 @@ const useReadCSV = () => {
   );
 
   const getCompanyCSV = () => {
-    Papa.parse(companyCsv),
-      {
-        header: true,
-        download: true,
-        skipEmptyLines: true,
-        delimiter: ",",
-        complete: (values: ParseResult<CompanyData>) => {
-          setCompanyValues(values);
-        },
-      };
+    Papa.parse(companyCsv, {
+      header: true,
+      download: true,
+      skipEmptyLines: true,
+      delimiter: ",",
+      complete: (result: ParseResult<CompanyData>) => {
+        setCompanyValues({ data: result.data });
+      },
+    });
   };
 
   const getCountryCSV = () => {
-    Papa.parse(countryCsv),
-      {
-        header: true,
-        download: true,
-        skipEmptyLines: true,
-        delimiter: ",",
-        complete: (values: ParseResult<CountryData>) => {
-          setCountryValues(values);
-        },
-      };
+    Papa.parse(countryCsv, {
+      header: true,
+      download: true,
+      skipEmptyLines: true,
+      delimiter: ",",
+      complete: (result: ParseResult<CountryData>) => {
+        setCountryValues({ data: result.data });
+      },
+    });
   };
 
   useEffect(() => {
