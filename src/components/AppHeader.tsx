@@ -42,7 +42,6 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
         <div className="container-fluid">
           <a
             className="navbar-brand brand-logo d-flex align-items-center"
-            href="#"
             data-bs-toggle="tooltip"
             data-bs-placement="bottom"
             title="ECOTRACE"
@@ -92,7 +91,6 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
             <li className="dropdown">
               <a
                 className="dropdown-toggle nav-link mx-lg-3"
-                href="#"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
@@ -107,7 +105,6 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
                       i18n.changeLanguage("de");
                     }}
                     className="dropdown-item"
-                    href="#"
                   >
                     {t("common.languages.de")}
                   </a>
@@ -119,7 +116,6 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
                       i18n.changeLanguage("en");
                     }}
                     className="dropdown-item"
-                    href="#"
                   >
                     {t("common.languages.en")}
                   </a>

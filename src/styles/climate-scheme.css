@@ -63,6 +63,24 @@ a:visited {
   transform: scale(1.005);
 }
 
+.climate-scheme-faq-btn {
+  color: #eafccb;
+}
+
+.climate-scheme-faq-btn:hover {
+  color: #ffffff;
+}
+
+.climate-scheme-faq-btn:not(.collapsed),
+.climate-scheme-faq-btn:focus,
+.climate-scheme-faq-btn:link,
+.climate-scheme-faq-btn:visited,
+.climate-scheme-faq-btn:active {
+  box-shadow: none;
+  background-color: #141414;
+  color: #f1efe9;
+}
+
 .climate-scheme-btn {
   height: 2.5em;
   border-radius: 0.25em;

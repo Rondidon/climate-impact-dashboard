@@ -93,7 +93,7 @@ const SearchResults: FunctionComponent<SearchResultsProps> = ({
       "routes"
     ); // 'namespace' und 'key' ersetzen
     setSearchResults(calculateSearchResults(searchQuery, translation));
-  }, [searchQuery, i18n.language]);
+  }, [searchQuery, i18n.language, i18n]);
 
   const appRouteToSitename = (appRoute: AppRoute): string | undefined => {
     switch (appRoute) {

@@ -1,9 +1,8 @@
 import { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
 import AppFooter from "./components/AppFooter";
 import AppHeader from "./components/AppHeader";
 import AppMain from "./components/AppMain";
-import { AppRoute } from "./components/appRoute";
-import { BrowserRouter } from "react-router-dom";
 
 const appStyle: React.CSSProperties = {
   display: "flex",

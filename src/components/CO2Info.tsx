@@ -17,10 +17,10 @@ const CO2Info: FunctionComponent<CO2InfoProps> = ({}) => {
       </div>
 
       <div className="accordion" id="accordionExample">
-        <div className="accordion-item">
+        <div className="accordion-item climate-scheme-bg-dark-grey climate-scheme-bright-text">
           <h2 className="accordion-header" id="headingOne">
             <button
-              className="accordion-button"
+              className="accordion-button climate-scheme-bg-dark-grey climate-scheme-faq-btn"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseOne"
@@ -39,10 +39,10 @@ const CO2Info: FunctionComponent<CO2InfoProps> = ({}) => {
             <div className="accordion-body">{t("routes.co2info.faq.a1")}</div>
           </div>
         </div>
-        <div className="accordion-item">
+        <div className="accordion-item climate-scheme-bg-dark-grey climate-scheme-bright-text">
           <h2 className="accordion-header" id="headingTwo">
             <button
-              className="accordion-button collapsed"
+              className="accordion-button collapsed climate-scheme-bg-dark-grey climate-scheme-faq-btn"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseTwo"
@@ -61,10 +61,10 @@ const CO2Info: FunctionComponent<CO2InfoProps> = ({}) => {
             <div className="accordion-body">{t("routes.co2info.faq.a2")}</div>
           </div>
         </div>
-        <div className="accordion-item">
+        <div className="accordion-item climate-scheme-bg-dark-grey climate-scheme-bright-text">
           <h2 className="accordion-header" id="headingThree">
             <button
-              className="accordion-button collapsed"
+              className="accordion-button collapsed climate-scheme-bg-dark-grey climate-scheme-faq-btn"
               type="button"
               data-bs-toggle="collapse"
               data-bs-target="#collapseThree"

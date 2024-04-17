@@ -1,13 +1,8 @@
 import { FunctionComponent } from "react";
-import { Link } from "react-router-dom";
-import {
-  AppRoute,
-  co2InfoRoute,
-  databaseRoute,
-  participationRoute,
-} from "./appRoute";
-import getAssetLocation from "../utils/assetLocator";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
+import getAssetLocation from "../utils/assetLocator";
+import { co2InfoRoute, databaseRoute, participationRoute } from "./appRoute";
 type HomeProps = {};
 
 const Home: FunctionComponent<HomeProps> = ({}) => {
