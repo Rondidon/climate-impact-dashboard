@@ -5,6 +5,7 @@ import useReadCountryData from "../hooks/useReadCountryData";
 import { useSortData } from "../hooks/useSortData";
 import { renderSortIcon } from "./renderSortItem";
 import { useTranslation } from "react-i18next";
+import { translateTableHeader } from "./translateHeader";
 
 type CountryDataTableProps = {
   filterQuery: FilterQuery;
@@ -42,7 +43,7 @@ const CountryDataTable: FunctionComponent<CountryDataTableProps> = ({
                   style={{ cursor: "pointer", minWidth: "11em" }}
                   className="table-dark"
                 >
-                  {key} {renderSortIcon(key, sortKey)}
+                  {translateTableHeader(key, t)} {renderSortIcon(key, sortKey)}
                 </th>
               ))}
             </tr>
@@ -52,7 +53,18 @@ const CountryDataTable: FunctionComponent<CountryDataTableProps> = ({
               <tr key={index}>
                 {header.map((head, cellIndex) => (
                   <td key={cellIndex} className="table-dark">
-                    {row[head]}
+                    {head === "countryCode" ? (
+                      <div className="d-inline-block">
+                        <span
+                          className={`flag-icon me-1 flag-icon-${row[
+                            head
+                          ].toLowerCase()}`}
+                        ></span>
+                        <a>{row[head]}</a>
+                      </div>
+                    ) : (
+                      row[head]
+                    )}
                   </td>
                 ))}
               </tr>

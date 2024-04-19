@@ -94,7 +94,10 @@
         "companytable": {
           "title": "Unternehmen",
           "text": "CO2-Emissionen in Kilotonnen nach Unternehmen."
-        }
+        },
+        "companyName": "Unternehmen",
+        "countryName": "Ländername",
+        "countryCode": "Land"
       },
       "searchresults": {
         "title": "Suchergebnisse",

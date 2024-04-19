@@ -3,12 +3,14 @@ import { useTranslation } from "react-i18next";
 import { FilterQuery } from "../../types/filterQuery";
 import CompanyDataTable from "./CompanyDataTable";
 import CountryDataTable from "./CountryDataTable";
+import FilterSidebar from "./FilterSidebar";
 
 const defaultQuery: FilterQuery = {
-  yearFrom: 2020,
+  yearFrom: 2021,
   yearTo: 2023,
   display: ["companies", "countries"],
-  countryCode: "DE",
+  countryCode: undefined,
+  companyName: undefined,
 };
 
 const DatabaseViewer: React.FunctionComponent = () => {
@@ -22,11 +24,17 @@ const DatabaseViewer: React.FunctionComponent = () => {
         <h1 className="mb-4">{t("routes.databaseviewer.title")}</h1>
         <p>{t("routes.databaseviewer.text")}</p>
       </div>
-      {currentFilterQuery.display.includes("countries") && (
-        <CountryDataTable filterQuery={currentFilterQuery} />
-      )}
+
+      <FilterSidebar
+        currentFilterQuery={currentFilterQuery}
+        setCurrentFilterQuery={setCurrentFilterQuery}
+      />
+
       {currentFilterQuery.display.includes("companies") && (
         <CompanyDataTable filterQuery={currentFilterQuery} />
+      )}
+      {currentFilterQuery.display.includes("countries") && (
+        <CountryDataTable filterQuery={currentFilterQuery} />
       )}
     </div>
   );

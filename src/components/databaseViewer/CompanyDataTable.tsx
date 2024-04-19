@@ -5,6 +5,7 @@ import useFilterCompanyData from "../hooks/useFilterCompanyData";
 import useReadCompanyData from "../hooks/useReadCompanyData";
 import { useSortData } from "../hooks/useSortData";
 import { renderSortIcon } from "./renderSortItem";
+import { translateTableHeader } from "./translateHeader";
 
 type CompanyDataTableProps = {
   filterQuery: FilterQuery;
@@ -42,7 +43,7 @@ const CompanyDataTable: FunctionComponent<CompanyDataTableProps> = ({
                   style={{ cursor: "pointer", minWidth: "11em" }}
                   className="table-dark"
                 >
-                  {key} {renderSortIcon(key, sortKey)}
+                  {translateTableHeader(key, t)} {renderSortIcon(key, sortKey)}
                 </th>
               ))}
             </tr>
@@ -52,7 +53,18 @@ const CompanyDataTable: FunctionComponent<CompanyDataTableProps> = ({
               <tr key={index}>
                 {header.map((head, cellIndex) => (
                   <td key={cellIndex} className="table-dark">
-                    {row[head]}
+                    {head === "countryCode" ? (
+                      <div className="d-inline-block">
+                        <span
+                          className={`flag-icon me-1 flag-icon-${row[
+                            head
+                          ].toLowerCase()}`}
+                        ></span>
+                        <a>{row[head]}</a>
+                      </div>
+                    ) : (
+                      row[head]
+                    )}
                   </td>
                 ))}
               </tr>

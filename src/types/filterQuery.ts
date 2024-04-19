@@ -8,7 +8,7 @@ export type YearOption =
   | 2021
   | 2022
   | 2023;
-type DisplayOption = "companies" | "countries";
+export type DisplayOption = "companies" | "countries";
 
 export type FilterQuery = {
   yearFrom?: YearOption;
