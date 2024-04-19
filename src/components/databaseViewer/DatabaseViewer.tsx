@@ -8,6 +8,7 @@ const defaultQuery: FilterQuery = {
   yearFrom: 2020,
   yearTo: 2023,
   display: ["companies", "countries"],
+  countryCode: "DE",
 };
 
 const DatabaseViewer: React.FunctionComponent = () => {
@@ -16,13 +17,14 @@ const DatabaseViewer: React.FunctionComponent = () => {
     useState<FilterQuery>(defaultQuery);
 
   return (
-    <div className="row my-1 my-xl-5">
-      <h1 className="mb-4">{t("routes.databaseviewer.title")}</h1>
-      <p>{t("routes.databaseviewer.text1")}</p>
+    <div className="row my-1 my-xl-5 gap-4">
+      <div>
+        <h1 className="mb-4">{t("routes.databaseviewer.title")}</h1>
+        <p>{t("routes.databaseviewer.text")}</p>
+      </div>
       {currentFilterQuery.display.includes("countries") && (
         <CountryDataTable filterQuery={currentFilterQuery} />
       )}
-
       {currentFilterQuery.display.includes("companies") && (
         <CompanyDataTable filterQuery={currentFilterQuery} />
       )}

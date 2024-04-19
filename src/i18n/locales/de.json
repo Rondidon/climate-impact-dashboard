@@ -85,8 +85,16 @@
       "imprint": {},
       "privacypolicy": {},
       "databaseviewer": {
-        "title": "Jährliche CO2 Emissionen",
-        "text1": "Die hier aufgeführten Daten zeigen die jährlichen CO2-Emissionen, gemessen in Kilotonnen. Sie können die Emissionen jedes Unternehmens nachverfolgen und vergleichen, um Muster, Trends und Fortschritte in Richtung umweltfreundlicherer Geschäftspraktiken zu erkennen. Mit der Sortier- und Filterfunktion können Sie die Informationen anpassen, um spezifische Datenpunkte herauszufiltern, wie beispielsweise Emissionen in einem bestimmten Jahr oder die Performance von Unternehmen in bestimmten Ländern."
+        "title": "CO2 Emissionsdatenbank",
+        "text": "Die hier aufgeführten Daten zeigen die jährlichen CO2-Emissionen, gemessen in Kilotonnen. Sie können die Emissionen jedes Unternehmens nachverfolgen und vergleichen, um Muster, Trends und Fortschritte in Richtung umweltfreundlicherer Geschäftspraktiken zu erkennen. Mit der Sortier- und Filterfunktion können Sie die Informationen anpassen, um spezifische Datenpunkte herauszufiltern, wie beispielsweise Emissionen in einem bestimmten Jahr oder die Performance von Unternehmen in bestimmten Ländern.",
+        "countrytable": {
+          "title": "Länder",
+          "text": "CO2-Emissionen in Kilotonnen nach Land."
+        },
+        "companytable": {
+          "title": "Unternehmen",
+          "text": "CO2-Emissionen in Kilotonnen nach Unternehmen."
+        }
       },
       "searchresults": {
         "title": "Suchergebnisse",
