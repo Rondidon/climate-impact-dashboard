@@ -8,9 +8,13 @@ type FilteredCountryLine = {
 };
 
 const useFilterCountryData = (
-  countryData: CountryData[],
-  query: FilterQuery
+  countryData?: CountryData[],
+  query?: FilterQuery
 ) => {
+  if (!query || !countryData) {
+    return { filteredCountryData: [], header: [] };
+  }
+
   let filteredCountryData = countryData.filter((line) => {
     // Filter by countryCode (case-insensitive)
     if (
@@ -49,13 +53,13 @@ const useFilterCountryData = (
   });
 
   // Generate header based on year range
-  const header = ["Country_Code", "Country_Name"];
+  const header = ["countryCode", "countryName"];
   for (
     let year = Math.max(yearFrom, 2015);
     year <= Math.min(yearTo, 2023);
     year++
   ) {
-    header.push(`CO2_${year}`);
+    header.push(`co2_${year}`);
   }
 
   return { filteredCountryData, header };

@@ -9,9 +9,13 @@ type FilteredCompanyLine = {
 };
 
 const useFilterCompanyData = (
-  companyData: CompanyData[],
-  query: FilterQuery
+  companyData?: CompanyData[],
+  query?: FilterQuery
 ) => {
+  if (!query || !companyData) {
+    return { filteredCompanyData: [], header: [] };
+  }
+
   let filteredCompanyData = companyData.filter((company) => {
     // Filter by companyName (case-insensitive)
     if (
@@ -60,13 +64,13 @@ const useFilterCompanyData = (
   });
 
   // Generate header based on year range
-  const header = ["Company_ID", "Company_Name", "Country_Code"];
+  const header = ["companyId", "companyName", "countryCode"];
   for (
     let year = Math.max(yearFrom, 2015);
     year <= Math.min(yearTo, 2023);
     year++
   ) {
-    header.push(`CO2_${year}`);
+    header.push(`co2_${year}`);
   }
 
   return { filteredCompanyData, header };
