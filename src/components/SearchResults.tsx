@@ -86,12 +86,12 @@ const SearchResults: FunctionComponent<SearchResultsProps> = ({
   >(undefined);
 
   useEffect(() => {
-    const currentLanguage = i18n.language; // Aktuelle Sprache erhalten
+    const currentLanguage = i18n.language;
     const translation: JSON = i18n.getResource(
       currentLanguage,
       "translation",
       "routes"
-    ); // 'namespace' und 'key' ersetzen
+    );
     setSearchResults(calculateSearchResults(searchQuery, translation));
   }, [searchQuery, i18n.language, i18n]);
 
@@ -104,7 +104,7 @@ const SearchResults: FunctionComponent<SearchResultsProps> = ({
       case "/participation":
         return t("routes.participation.title");
       case "/database":
-        return t("routes.database.title");
+        return t("routes.databaseviewer.title");
       default:
         return "?";
     }

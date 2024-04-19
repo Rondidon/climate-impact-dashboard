@@ -1,60 +1,63 @@
-import React, { FunctionComponent, useState } from "react";
-import useReadCSV, { CompanyData } from "./partials/useReadCSV";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import useReadCSV from "./hooks/useReadCSV";
+import { useSortData } from "./hooks/useSortData"; // Pfad nach Bedarf anpassen
 
-type DatabaseViewerProps = {};
-
-const DatabaseViewer: FunctionComponent<DatabaseViewerProps> = () => {
+const DatabaseViewer: React.FunctionComponent = () => {
   const { companyValues } = useReadCSV();
-  const [sortKey, setSortKey] = useState<string | null>(null);
-  const [isAsc, setIsAsc] = useState<boolean>(true);
+  const { t } = useTranslation();
+  const { sortedData, sortDataFunc, sortKey } = useSortData(
+    companyValues?.data
+  );
 
-  const sortData = (key: string) => {
-    setSortKey(key);
-    setIsAsc(!isAsc);
+  const renderSortIcon = (key: string) => {
+    if (sortKey.key === key) {
+      return (
+        <svg
+          // SVG-Attribute
+          style={{ transform: sortKey.isAsc ? "" : "rotate(180deg)" }}
+        >
+          <path d="M2 5L8 11L14 5" />
+        </svg>
+      );
+    }
+    return null;
   };
 
-  const sortedData = React.useMemo(() => {
-    if (!companyValues?.data || sortKey === null) return companyValues?.data;
-    return [...companyValues.data].sort((a, b) => {
-      // Stellen Sie sicher, dass sortKey ein String ist, und verwenden Sie eine Typ-Assertion
-      const key = sortKey as keyof CompanyData;
-      const aValue = a[key];
-      const bValue = b[key];
-
-      // Vergleichen Sie aValue und bValue. Stellen Sie sicher, dass beide Werte für den Vergleich geeignet sind
-      // Möglicherweise müssen Sie die Logik anpassen, um unterschiedliche Datentypen zu handhaben
-      if (aValue < bValue) return isAsc ? -1 : 1;
-      if (aValue > bValue) return isAsc ? 1 : -1;
-      return 0;
-    });
-  }, [companyValues, sortKey, isAsc]);
-
   return (
-    <div className="container">
-      <table className="table">
-        <thead>
-          <tr>
-            {Object.keys(companyValues?.data[0] || {}).map((key) => (
-              <th
-                key={key}
-                onClick={() => sortData(key)}
-                style={{ cursor: "pointer" }}
-              >
-                {key}
-              </th>
-            ))}
-          </tr>
-        </thead>
-        <tbody>
-          {sortedData?.map((row, index) => (
-            <tr key={index}>
-              {Object.values(row).map((value, cellIndex) => (
-                <td key={cellIndex}>{value}</td>
+    <div className="row my-1 my-xl-5">
+      <h1 className="mb-4">{t("routes.databaseviewer.title")}</h1>
+      <p>{t("routes.databaseviewer.text1")}</p>
+      <div className="overflow-auto">
+        <table className="table text-nowrap">
+          <thead>
+            <tr>
+              {Object.keys(companyValues?.data[0] || {}).map((key) => (
+                <th
+                  scope="col"
+                  key={key}
+                  onClick={() => sortDataFunc(key)}
+                  style={{ cursor: "pointer", minWidth: "11em" }}
+                  className="table-dark"
+                >
+                  {key} {renderSortIcon(key)}
+                </th>
               ))}
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {sortedData?.map((row, index) => (
+              <tr key={index}>
+                {Object.values(row).map((value, cellIndex) => (
+                  <td scope="row" key={cellIndex} className="table-dark">
+                    {value}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };
