@@ -2,7 +2,6 @@ import { CompanyData } from "../../types/companyData";
 import { FilterQuery } from "../../types/filterQuery";
 
 type FilteredCompanyLine = {
-  companyId: string;
   companyName: string;
   countryCode: string;
   [key: `co2_${number}`]: string | undefined;
@@ -42,7 +41,6 @@ const useFilterCompanyData = (
 
   filteredCompanyData = filteredCompanyData.map((company) => {
     const filteredLine: Partial<FilteredCompanyLine> = {
-      companyId: company.companyId,
       companyName: company.companyName,
       countryCode: company.countryCode,
     };
@@ -64,7 +62,7 @@ const useFilterCompanyData = (
   });
 
   // Generate header based on year range
-  const header = ["companyId", "companyName", "countryCode"];
+  const header = ["companyName", "countryCode"];
   for (
     let year = Math.max(yearFrom, 2015);
     year <= Math.min(yearTo, 2023);

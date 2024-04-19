@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-interface SortState {
+export interface SortState {
   key: string | null;
   isAsc: boolean;
 }

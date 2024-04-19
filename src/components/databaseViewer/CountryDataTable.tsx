@@ -3,6 +3,7 @@ import { FilterQuery } from "../../types/filterQuery";
 import useFilterCountryData from "../hooks/useFilterCountryData";
 import useReadCountryData from "../hooks/useReadCountryData";
 import { useSortData } from "../hooks/useSortData";
+import { renderSortIcon } from "./renderSortItem";
 
 type CountryDataTableProps = {
   filterQuery: FilterQuery;
@@ -18,20 +19,6 @@ const CountryDataTable: FunctionComponent<CountryDataTableProps> = ({
   );
   const { sortedData, sortDataFunc, sortKey } =
     useSortData(filteredCountryData);
-
-  const renderSortIcon = (key: string) => {
-    if (sortKey.key === key) {
-      return (
-        <svg
-          // SVG-Attribute
-          style={{ transform: sortKey.isAsc ? "" : "rotate(180deg)" }}
-        >
-          <path d="M2 5L8 11L14 5" />
-        </svg>
-      );
-    }
-    return null;
-  };
 
   if (!header || !sortedData) {
     return <div>No table data.</div>;
@@ -50,7 +37,7 @@ const CountryDataTable: FunctionComponent<CountryDataTableProps> = ({
                 style={{ cursor: "pointer", minWidth: "11em" }}
                 className="table-dark"
               >
-                {key} {renderSortIcon(key)}
+                {key} {renderSortIcon(key, sortKey)}
               </th>
             ))}
           </tr>
