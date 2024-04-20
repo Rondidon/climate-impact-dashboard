@@ -16,12 +16,18 @@ const useFilterCompanyData = (
   }
 
   let filteredCompanyData = companyData.filter((company) => {
+    const queryCompanyNameLowered = query.companyName
+      ? query.companyName?.toLowerCase()
+      : "";
+
     // Filter by companyName
+
+    console.log(query.companyName?.toLowerCase());
+    console.log(company.companyName?.toLowerCase());
+
     if (
       query.companyName &&
-      !company.companyName
-        .toLowerCase()
-        .includes(query.companyName.toLowerCase())
+      !company.companyName.toLowerCase().includes(queryCompanyNameLowered)
     ) {
       return false;
     }
