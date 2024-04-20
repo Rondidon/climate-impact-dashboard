@@ -19,8 +19,8 @@ const DatabaseViewer: React.FunctionComponent = () => {
     useState<FilterQuery>(defaultQuery);
 
   return (
-    <div className="row my-1 my-xl-5 gap-4">
-      <div>
+    <div className="container">
+      <div className="row my-xl-5 my-1 gap-4">
         <h1 className="mb-4">{t("routes.databaseviewer.title")}</h1>
         <p>{t("routes.databaseviewer.text")}</p>
       </div>
