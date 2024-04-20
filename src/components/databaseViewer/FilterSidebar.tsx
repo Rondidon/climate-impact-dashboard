@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import escapeStringRegexp from "escape-string-regexp";
+import React, { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { DisplayOption, FilterQuery } from "../../types/filterQuery";
 
 type FilterSidebarProps = {
@@ -121,10 +121,30 @@ const FilterSidebar: React.FunctionComponent<FilterSidebarProps> = ({
 
   return (
     <div className="d-flex flex-column">
+      <div>
+        <h4 className="mb-3">{t("routes.databaseviewer.sidebar.preset")}</h4>
+        <button className="nav-link m-2" onClick={() => handlePreset("all")}>
+          {t("routes.databaseviewer.sidebar.presetAll")}
+        </button>
+        <button
+          className="nav-link m-2"
+          onClick={() => handlePreset("currentYear")}
+        >
+          {t("routes.databaseviewer.sidebar.presetCurrentYear")}
+        </button>
+        <button
+          className="nav-link m-2"
+          onClick={() => handlePreset("lastThreeYears")}
+        >
+          {t("routes.databaseviewer.sidebar.presetLastThreeYears")}
+        </button>
+      </div>
+      <hr className="my-3" />
+      <h4 className="mb-3">{t("routes.databaseviewer.sidebar.filter")}</h4>
       <form onSubmit={handleSubmit}>
         <div className="mb-3 d-flex flex-column">
           <label htmlFor="yearFrom" className="form-label">
-            {t("yearFrom")}
+            {t("routes.databaseviewer.sidebar.yearFrom")}
           </label>
           <input
             type="number"
@@ -138,7 +158,7 @@ const FilterSidebar: React.FunctionComponent<FilterSidebarProps> = ({
         </div>
         <div className="mb-3 d-flex flex-column">
           <label htmlFor="yearTo" className="form-label">
-            {t("yearTo")}
+            {t("routes.databaseviewer.sidebar.yearTo")}
           </label>
           <input
             type="number"
@@ -159,7 +179,7 @@ const FilterSidebar: React.FunctionComponent<FilterSidebarProps> = ({
             onChange={() => setDisplayCompanies(!displayCompanies)}
           />
           <label className="form-check-label" htmlFor="displayCompanies">
-            {t("displayCompanies")}
+            {t("routes.databaseviewer.sidebar.displayCompanies")}
           </label>
         </div>
         <div className="mb-3 d-flex gap-2">
@@ -171,18 +191,21 @@ const FilterSidebar: React.FunctionComponent<FilterSidebarProps> = ({
             onChange={() => setDisplayCountries(!displayCountries)}
           />
           <label className="form-check-label" htmlFor="displayCountries">
-            {t("displayCountries")}
+            {t("routes.databaseviewer.sidebar.displayCountries")}
           </label>
         </div>
         {displayCompanies && (
           <div className="mb-3 d-flex flex-column">
             <label htmlFor="companyName" className="form-label">
-              {t("companyName")}
+              {t("routes.databaseviewer.sidebar.companyName.label")}
             </label>
             <input
               type="text"
               className="climate-scheme-input-field"
               id="companyName"
+              placeholder={t(
+                "routes.databaseviewer.sidebar.companyName.placeholder"
+              )}
               value={companyName}
               onChange={(e) => setCompanyName(e.target.value)}
             />
@@ -190,13 +213,16 @@ const FilterSidebar: React.FunctionComponent<FilterSidebarProps> = ({
         )}
         <div className="mb-3 d-flex flex-column">
           <label htmlFor="countryCode" className="form-label">
-            {t("countryCode")}
+            {t("routes.databaseviewer.sidebar.countryCode.label")}
           </label>
           <input
             type="text"
             className="climate-scheme-input-field"
             id="countryCode"
             value={countryCode}
+            placeholder={t(
+              "routes.databaseviewer.sidebar.countryCode.placeholder"
+            )}
             onChange={(e) => setCountryCode(e.target.value)}
           />
         </div>
@@ -205,27 +231,9 @@ const FilterSidebar: React.FunctionComponent<FilterSidebarProps> = ({
           className="btn climate-scheme-btn"
           disabled={!isFormValid}
         >
-          {t("submit")}
+          {t("routes.databaseviewer.sidebar.submit")}
         </button>
       </form>
-      <hr />
-      <div>
-        <button className="nav-link m-2" onClick={() => handlePreset("all")}>
-          {t("presetAll")}
-        </button>
-        <button
-          className="nav-link m-2"
-          onClick={() => handlePreset("currentYear")}
-        >
-          {t("presetCurrentYear")}
-        </button>
-        <button
-          className="nav-link m-2"
-          onClick={() => handlePreset("lastThreeYears")}
-        >
-          {t("presetLastThreeYears")}
-        </button>
-      </div>
     </div>
   );
 };

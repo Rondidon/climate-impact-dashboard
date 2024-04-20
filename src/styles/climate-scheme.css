@@ -63,6 +63,18 @@ a:visited {
   transform: scale(1.005);
 }
 
+.climate-scheme-table-header {
+  height: 3em;
+  text-align: center;
+  border: 1px solid #212529;
+  background-color: #212529 !important;
+  border-bottom: solid #f1efe9;
+}
+
+.climate-scheme-table-header:hover {
+  background-color: #2c3034 !important;
+}
+
 .climate-scheme-faq-btn {
   color: #eafccb;
 }
@@ -127,6 +139,7 @@ a:visited {
 
 .brand-logo {
   transition: transform 0.3s ease;
+  cursor: pointer;
 }
 
 .brand-logo:hover {
@@ -179,6 +192,12 @@ a:visited {
 .navbar-dark:hover {
   border-color: #ffffff;
   transform: scale(1.1);
+}
+
+.climate-scheme-database-container {
+  background-color: #141414;
+  border-radius: 20px;
+  padding: 1em;
 }
 
 @media only screen and (max-width: 991px) {

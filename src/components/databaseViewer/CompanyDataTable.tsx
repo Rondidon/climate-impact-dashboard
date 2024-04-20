@@ -32,7 +32,7 @@ const CompanyDataTable: FunctionComponent<CompanyDataTableProps> = ({
       <h3>{t("routes.databaseviewer.companytable.title")}</h3>
       <p>{t("routes.databaseviewer.companytable.text")}</p>
       <div className="overflow-auto">
-        <table className="table text-nowrap">
+        <table className="table table-dark table-striped text-nowrap">
           <thead>
             <tr>
               {header.map((key) => (
@@ -40,10 +40,13 @@ const CompanyDataTable: FunctionComponent<CompanyDataTableProps> = ({
                   scope="col"
                   key={key}
                   onClick={() => sortDataFunc(key)}
-                  style={{ cursor: "pointer", minWidth: "11em" }}
-                  className="table-dark"
+                  style={{
+                    cursor: "pointer",
+                    minWidth: "11em",
+                  }}
+                  className="climate-scheme-table-header"
                 >
-                  {translateTableHeader(key, t)} {renderSortIcon(key, sortKey)}
+                  {renderSortIcon(key, sortKey)} {translateTableHeader(key, t)}
                 </th>
               ))}
             </tr>
@@ -52,7 +55,7 @@ const CompanyDataTable: FunctionComponent<CompanyDataTableProps> = ({
             {sortedData.map((row, index) => (
               <tr key={index}>
                 {header.map((head, cellIndex) => (
-                  <td key={cellIndex} className="table-dark">
+                  <td key={cellIndex} className="p-2">
                     {head === "countryCode" ? (
                       <div className="d-inline-block">
                         <span

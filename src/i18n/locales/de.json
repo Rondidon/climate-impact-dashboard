@@ -95,9 +95,31 @@
           "title": "Unternehmen",
           "text": "CO2-Emissionen in Kilotonnen nach Unternehmen."
         },
-        "companyName": "Unternehmen",
-        "countryName": "Ländername",
-        "countryCode": "Land"
+        "table": {
+          "companyName": "Unternehmen",
+          "countryName": "Ländername",
+          "countryCode": "Land"
+        },
+        "sidebar": {
+          "companyName": {
+            "label": "Unternehmen",
+            "placeholder": "Company A"
+          },
+          "countryCode": {
+            "label": "Ländercode",
+            "placeholder": "DE, US, .."
+          },
+          "yearFrom": "Jahr (von):",
+          "yearTo": "Jahr (bis):",
+          "displayCompanies": "Unternehmenstabelle anzeigen",
+          "displayCountries": "Ländertabelle anzeigen",
+          "submit": "Abschicken",
+          "preset": "Voreinstellungen",
+          "filter": "Filter",
+          "presetAll": "Alle Daten anzeigen",
+          "presetCurrentYear": "Dieses Jahr",
+          "presetLastThreeYears": "Letzte drei Jahre"
+        }
       },
       "searchresults": {
         "title": "Suchergebnisse",

@@ -94,6 +94,31 @@
         "companytable": {
           "title": "Company",
           "text": "CO2 emissions in Kilotons by company."
+        },
+        "table": {
+          "companyName": "Company",
+          "countryCode": "Country",
+          "countryName": "Country name"
+        },
+        "sidebar": {
+          "companyName": {
+            "label": "Company",
+            "placeholder": "Company A"
+          },
+          "countryCode": {
+            "label": "Country code",
+            "placeholder": "DE, US, .."
+          },
+          "yearFrom": "Year (from):",
+          "yearTo": "Year (to):",
+          "displayCompanies": "Show company table",
+          "displayCountries": "Show country table",
+          "submit": "Submit",
+          "preset": "Presets",
+          "filter": "Filter",
+          "presetAll": "Show all data",
+          "presetCurrentYear": "This year",
+          "presetLastThreeYears": "Last three years"
         }
       },
       "searchresults": {
