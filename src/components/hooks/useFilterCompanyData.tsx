@@ -16,23 +16,34 @@ const useFilterCompanyData = (
   }
 
   let filteredCompanyData = companyData.filter((company) => {
-    // Filter by companyName (case-insensitive)
+    // Filter by companyName
     if (
       query.companyName &&
-      query.companyName.toLowerCase() !== company.companyName.toLowerCase()
+      !company.companyName
+        .toLowerCase()
+        .includes(query.companyName.toLowerCase())
     ) {
       return false;
     }
 
-    // Filter by countryCode (case-insensitive)
+    // Filter by countryCode
+    const countryCodeArray: string[] | undefined = query.countryCode
+      ?.split(",")
+      .map((code) => code.trim().toLowerCase());
+
+    const lineCountryCodeLower = company.countryCode.toLowerCase();
     if (
-      query.countryCode &&
-      query.countryCode.toLowerCase() !== company.countryCode.toLowerCase()
+      !countryCodeArray ||
+      countryCodeArray.length === 0 ||
+      countryCodeArray[0] === ""
     ) {
-      return false;
+      return true;
+    }
+    if (countryCodeArray) {
+      return countryCodeArray.includes(lineCountryCodeLower);
     }
 
-    return true; // Dieses true war notwendig, um die Filterfunktion korrekt zu schließen.
+    return true;
   });
 
   // Filter data based on year range if provided

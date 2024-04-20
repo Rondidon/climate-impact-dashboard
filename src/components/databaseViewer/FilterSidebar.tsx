@@ -60,32 +60,36 @@ const FilterSidebar: React.FunctionComponent<FilterSidebarProps> = ({
     switch (preset) {
       case "all":
         newQuery = {
-          companyName: undefined,
-          countryCode: undefined,
           display: ["companies", "countries"],
-          yearFrom: undefined,
-          yearTo: undefined,
+          companyName: "",
+          countryCode: "",
+          yearFrom: 2015,
+          yearTo: 2023,
         };
+        setCompanyName("");
+        setCountryCode("");
         break;
       case "currentYear":
-        const currentYear = 2023;
         newQuery = {
-          companyName: undefined,
-          countryCode: undefined,
           display: ["companies", "countries"],
-          yearFrom: currentYear,
-          yearTo: undefined,
+          companyName: "",
+          countryCode: "",
+          yearFrom: 2023,
+          yearTo: 2023,
         };
+        setCompanyName("");
+        setCountryCode("");
         break;
       case "lastThreeYears":
-        const threeYearsAgo = 2021;
         newQuery = {
-          companyName: undefined,
-          countryCode: undefined,
           display: ["companies", "countries"],
-          yearFrom: threeYearsAgo,
-          yearTo: undefined,
+          companyName: "",
+          countryCode: "",
+          yearFrom: 2021,
+          yearTo: 2023,
         };
+        setCompanyName("");
+        setCountryCode("");
         break;
       default:
         return;

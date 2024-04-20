@@ -15,16 +15,22 @@ const useFilterCountryData = (
     return { filteredCountryData: [], header: [] };
   }
 
-  let filteredCountryData = countryData.filter((line) => {
-    // Filter by countryCode (case-insensitive)
-    if (
-      query.countryCode &&
-      query.countryCode.toLowerCase() !== line.countryCode.toLowerCase()
-    ) {
-      return false;
-    }
+  const countryCodeArray: string[] | undefined = query.countryCode
+    ?.split(",")
+    .map((code) => code.trim().toLowerCase());
 
-    return true;
+  let filteredCountryData = countryData.filter((line) => {
+    const lineCountryCodeLower = line.countryCode.toLowerCase();
+    if (
+      !countryCodeArray ||
+      countryCodeArray.length === 0 ||
+      countryCodeArray[0] === ""
+    ) {
+      return true;
+    }
+    if (countryCodeArray) {
+      return countryCodeArray.includes(lineCountryCodeLower);
+    }
   });
 
   // Filter data based on year range if provided

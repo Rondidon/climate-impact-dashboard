@@ -197,7 +197,7 @@ a:visited {
 
 .climate-scheme-database-container {
   background-color: #141414;
-  border-radius: 20px;
+  border-radius: 0.5em;
   padding: 1em;
 }
 

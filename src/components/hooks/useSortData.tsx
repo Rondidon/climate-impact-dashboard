@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useMemo } from "react";
 
 export interface SortState {
   key: string | null;
@@ -18,15 +18,27 @@ export const useSortData = <T extends Record<string, any>>(
     }
   };
 
-  const sortedData = React.useMemo(() => {
+  const sortedData = useMemo(() => {
     if (!data || sortKey.key === null) return data;
     return [...data].sort((a, b) => {
-      const aValue = a[sortKey.key!]; // Non-null assertion operator, because we check nullity above
+      const aValue = a[sortKey.key!];
       const bValue = b[sortKey.key!];
 
-      if (aValue < bValue) return sortKey.isAsc ? -1 : 1;
-      if (aValue > bValue) return sortKey.isAsc ? 1 : -1;
-      return 0;
+      // Check if the values are numbers
+      const aValueIsNumber = !isNaN(Number(aValue));
+      const bValueIsNumber = !isNaN(Number(bValue));
+
+      if (aValueIsNumber && bValueIsNumber) {
+        // If both values are numbers, compare them as numbers
+        return sortKey.isAsc
+          ? Number(aValue) - Number(bValue)
+          : Number(bValue) - Number(aValue);
+      } else {
+        // If one or both values are not numbers, compare them as strings
+        if (aValue < bValue) return sortKey.isAsc ? -1 : 1;
+        if (aValue > bValue) return sortKey.isAsc ? 1 : -1;
+        return 0;
+      }
     });
   }, [data, sortKey]);
 
