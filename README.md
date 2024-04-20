@@ -1,4 +1,4 @@
-# Climate Impact Dashboard - a CO2 emission database viewer.
+# ECOTRACE - CO2 emission database viewer
 
 Presentation of CO2 emissions by country and company as responsive, modern web application.
 A project within the context of a case study for the IU International University.
