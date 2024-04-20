@@ -25,19 +25,23 @@ const DatabaseViewer: React.FunctionComponent = () => {
         <p>{t("routes.databaseviewer.text")}</p>
       </div>
       <div className="d-flex gap-4 flex-xl-row flex-column w-xl-25 w-100">
-        <div className="climate-scheme-database-container">
+        <aside className="climate-scheme-database-container">
           <FilterSidebar
             currentFilterQuery={currentFilterQuery}
             setCurrentFilterQuery={setCurrentFilterQuery}
           />
-        </div>
+        </aside>
 
-        <div className="climate-scheme-database-container w-xl-75 w-100">
+        <div className="d-flex flex-column gap-4 w-xl-75 w-100">
           {currentFilterQuery.display.includes("companies") && (
-            <CompanyDataTable filterQuery={currentFilterQuery} />
+            <div className="climate-scheme-database-container">
+              <CompanyDataTable filterQuery={currentFilterQuery} />
+            </div>
           )}
           {currentFilterQuery.display.includes("countries") && (
-            <CountryDataTable filterQuery={currentFilterQuery} />
+            <div className="climate-scheme-database-container">
+              <CountryDataTable filterQuery={currentFilterQuery} />
+            </div>
           )}
         </div>
       </div>
