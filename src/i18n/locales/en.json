@@ -103,10 +103,10 @@
         "sidebar": {
           "companyName": {
             "label": "Company",
-            "placeholder": "Company A"
+            "placeholder": "B-Tech"
           },
           "countryCode": {
-            "label": "Country code",
+            "label": "Country codes",
             "placeholder": "DE, US, .."
           },
           "yearFrom": "Year (from):",

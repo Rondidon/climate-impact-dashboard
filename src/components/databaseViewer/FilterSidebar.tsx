@@ -1,7 +1,11 @@
 import escapeStringRegexp from "escape-string-regexp";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { DisplayOption, FilterQuery } from "../../types/filterQuery";
+import {
+  DisplayOption,
+  FilterQuery,
+  YearOption,
+} from "../../types/filterQuery";
 
 type FilterSidebarProps = {
   currentFilterQuery: FilterQuery;
@@ -30,8 +34,16 @@ const FilterSidebar: React.FunctionComponent<FilterSidebarProps> = ({
   const [isFormValid, setIsFormValid] = useState(true);
 
   useEffect(() => {
-    const yearValid = yearFrom && yearTo ? yearFrom <= yearTo : false;
-    const isValid = yearValid && (displayCompanies || displayCountries);
+    const isYearValid = (year: number | "" | undefined): boolean => {
+      return year === "" || (year != undefined && year >= 2015 && year <= 2023);
+    };
+    const areYearsInOrder = !yearFrom || !yearTo || yearFrom <= yearTo;
+    const isValid =
+      isYearValid(yearFrom) &&
+      isYearValid(yearTo) &&
+      areYearsInOrder &&
+      (displayCompanies || displayCountries);
+
     setIsFormValid(isValid);
   }, [yearFrom, yearTo, displayCompanies, displayCountries]);
 
@@ -102,25 +114,15 @@ const FilterSidebar: React.FunctionComponent<FilterSidebarProps> = ({
   };
 
   const handleChangeYearFrom = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newYear = parseInt(e.target.value, 10);
-    if (newYear >= 2015 && newYear <= 2023) {
-      setYearFrom(
-        newYear as 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023
-      );
-    } else {
-      setYearFrom(undefined);
-    }
+    const value = e.target.value;
+    const newYear = value ? parseInt(value, 10) : "";
+    setYearFrom(newYear);
   };
 
   const handleChangeYearTo = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newYear = parseInt(e.target.value, 10);
-    if (newYear >= 2015 && newYear <= 2023) {
-      setYearTo(
-        newYear as 2015 | 2016 | 2017 | 2018 | 2019 | 2020 | 2021 | 2022 | 2023
-      );
-    } else {
-      setYearTo(undefined);
-    }
+    const value = e.target.value;
+    const newYear = value ? parseInt(value, 10) : "";
+    setYearTo(newYear);
   };
 
   return (

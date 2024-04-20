@@ -46,7 +46,8 @@ const CompanyDataTable: FunctionComponent<CompanyDataTableProps> = ({
                   }}
                   className="climate-scheme-table-header"
                 >
-                  {renderSortIcon(key, sortKey)} {translateTableHeader(key, t)}
+                  {renderSortIcon(key, sortKey)}
+                  {translateTableHeader(key, t)}
                 </th>
               ))}
             </tr>

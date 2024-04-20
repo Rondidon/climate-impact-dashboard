@@ -11,8 +11,8 @@ export type YearOption =
 export type DisplayOption = "companies" | "countries";
 
 export type FilterQuery = {
-  yearFrom?: YearOption;
-  yearTo?: YearOption;
+  yearFrom?: YearOption | number | "";
+  yearTo?: YearOption | number | "";
   countryCode?: string;
   companyName?: string;
   display: DisplayOption[];
