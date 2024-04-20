@@ -1,3 +1,8 @@
+# ECOTrace CO2 emission database viewer
+
+Presentation of CO2 emissions by country and company as responsive, modern web application.
+A project within the context of a case study for the IU International University.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
