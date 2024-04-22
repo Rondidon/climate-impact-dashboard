@@ -17,9 +17,18 @@ import {
   searchResultsRoute,
 } from "./appRoute";
 import DatabaseViewer from "./databaseViewer/DatabaseViewer";
+import { FilterQuery } from "../types/filterQuery";
 
 type AppMainProps = {
   searchQuery: string;
+};
+
+const initialFilterQuery: FilterQuery = {
+  yearFrom: 2021,
+  yearTo: 2023,
+  display: ["companies", "countries"],
+  countryCode: undefined,
+  companyName: undefined,
 };
 
 const AppMain: FunctionComponent<AppMainProps> = ({ searchQuery }) => (
@@ -27,7 +36,10 @@ const AppMain: FunctionComponent<AppMainProps> = ({ searchQuery }) => (
     <Routes>
       <Route path={homeRoute} element={<Home />} />
       <Route path={co2InfoRoute} element={<CO2Info />} />
-      <Route path={databaseRoute} element={<DatabaseViewer />} />
+      <Route
+        path={databaseRoute}
+        element={<DatabaseViewer initialQuery={initialFilterQuery} />}
+      />
       <Route path={imprintRoute} element={<Imprint />} />
       <Route path={participationRoute} element={<Participation />} />
       <Route path={privacyRoute} element={<PrivacyPolicy />} />

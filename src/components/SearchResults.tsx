@@ -1,7 +1,7 @@
 import { FunctionComponent, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { AppRoute } from "./appRoute";
 import { Link } from "react-router-dom";
+import { AppRoute } from "./appRoute";
 
 type SearchResultsProps = {
   searchQuery: string;

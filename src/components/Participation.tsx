@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
-import getAssetLocation from "../utils/assetLocator";
 import { useTranslation } from "react-i18next";
+import getAssetLocation from "../utils/assetLocator";
 
 type ParticipationProps = {};
 

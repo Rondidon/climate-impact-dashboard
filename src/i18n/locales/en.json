@@ -124,6 +124,12 @@
       "searchresults": {
         "title": "Search results",
         "noresultsfound": "No results found."
+      },
+      "locallinks": {
+        "top": "Back to top",
+        "header": "Privacy Policy",
+        "privacypolicy1": "At a glance",
+        "privacypolicy2": "Mandatory information"
       }
     }
   }

@@ -5,18 +5,16 @@ import CompanyDataTable from "./CompanyDataTable";
 import CountryDataTable from "./CountryDataTable";
 import FilterSidebar from "./FilterSidebar";
 
-const defaultQuery: FilterQuery = {
-  yearFrom: 2021,
-  yearTo: 2023,
-  display: ["companies", "countries"],
-  countryCode: undefined,
-  companyName: undefined,
+type DatabaseViewerProps = {
+  initialQuery: FilterQuery;
 };
 
-const DatabaseViewer: React.FunctionComponent = () => {
+const DatabaseViewer: React.FunctionComponent<DatabaseViewerProps> = ({
+  initialQuery,
+}) => {
   const { t } = useTranslation();
   const [currentFilterQuery, setCurrentFilterQuery] =
-    useState<FilterQuery>(defaultQuery);
+    useState<FilterQuery>(initialQuery);
 
   return (
     <div className="container">

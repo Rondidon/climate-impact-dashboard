@@ -1,16 +1,44 @@
 import { FunctionComponent } from "react";
+import { useTranslation } from "react-i18next";
 
 type PrivacyPolicyProps = {};
 
 const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
-  return (
-    <div className="container my-0 my-xl-5">
+  const { t } = useTranslation();
+
+  const localLinkList: JSX.Element = (
+    <div>
+      <h6 className="text-uppercase fw-bold mb-4">
+        {t("routes.locallinks.header")}
+      </h6>
+      <ul>
+        <li>
+          <a className="nav-link" href={"#"}>
+            {t("routes.locallinks.top")}
+          </a>
+        </li>
+        <li>
+          <a className="nav-link" href={"#privacyAtAGlance"}>
+            {t("routes.locallinks.privacypolicy1")}
+          </a>
+        </li>
+        <li>
+          <a className="nav-link" href={"#mandatoryInformation"}>
+            {t("routes.locallinks.privacypolicy2")}
+          </a>
+        </li>
+      </ul>
+    </div>
+  );
+
+  const privacyPolicyText: JSX.Element = (
+    <>
       <h1>
         Datenschutz&shy;erkl&auml;rung
         <br />
         <br />
       </h1>
-      <h3>1. Datenschutz auf einen Blick</h3>
+      <h3 id="privacyAtAGlance">1. Datenschutz auf einen Blick</h3>
       <h4>Allgemeine Hinweise</h4>
       <p>
         Die folgenden Hinweise geben einen einfachen &Uuml;berblick
@@ -66,7 +94,9 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
         Hierzu sowie zu weiteren Fragen zum Thema Datenschutz k&ouml;nnen Sie
         sich jederzeit an uns wenden.
       </p>
-      <h3>2. Allgemeine Hinweise und Pflicht&shy;informationen</h3>
+      <h3 id="mandatoryInformation">
+        2. Allgemeine Hinweise und Pflicht&shy;informationen
+      </h3>
       <h4>Datenschutz</h4>
       <p>
         Die Betreiber dieser Seiten nehmen den Schutz Ihrer pers&ouml;nlichen
@@ -296,6 +326,15 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
       <p>
         Quelle: <a href="https://www.e-recht24.de">https://www.e-recht24.de</a>
       </p>
+    </>
+  );
+
+  return (
+    <div className="d-flex flex-column flex-xl-row gap-4 w-100 container my-0 my-xl-5">
+      <aside className="climate-scheme-locallink-container">
+        <div className="climate-scheme-locallink-element">{localLinkList}</div>
+      </aside>
+      <div className="flex-grow-1">{privacyPolicyText}</div>
     </div>
   );
 };

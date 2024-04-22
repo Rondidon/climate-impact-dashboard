@@ -201,6 +201,19 @@ a:visited {
   padding: 1em;
 }
 
+.climate-scheme-locallink-container {
+  min-width: 20%;
+}
+
+.climate-scheme-locallink-element {
+  background-color: #141414;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  position: -webkit-sticky; /* Für Safari */
+  position: sticky;
+  top: 1.5em; /* Setzt den Abstand zum oberen Rand des Anzeigebereichs */
+}
+
 @media only screen and (max-width: 991px) {
   .dropdown-toggle {
     padding: 0 0 1em 0;
