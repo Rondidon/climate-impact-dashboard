@@ -63,7 +63,7 @@ const CountryDataTable: FunctionComponent<CountryDataTableProps> = ({
                             head
                           ].toLowerCase()}`}
                         ></span>
-                        <button>{row[head]}</button>
+                        <span>{row[head]}</span>
                       </div>
                     ) : (
                       row[head]

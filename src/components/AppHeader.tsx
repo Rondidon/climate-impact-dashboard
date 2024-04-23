@@ -37,10 +37,10 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
   };
 
   return (
-    <header>
+    <header id="header">
       <nav className="navbar navbar-expand-lg climate-scheme-bg-black">
         <div className="container-fluid">
-          <button
+          <span
             className="navbar-brand brand-logo d-flex align-items-center"
             data-bs-toggle="tooltip"
             data-bs-placement="bottom"
@@ -57,7 +57,7 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
               <strong>{t("claim.part1")}</strong>
               {t("claim.part2")}
             </div>
-          </button>
+          </span>
           <button
             className="navbar-toggler navbar-dark"
             type="button"

@@ -13,7 +13,7 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = () => {
       </h6>
       <ul>
         <li>
-          <a className="nav-link" href={"#top"}>
+          <a className="nav-link" href={"#header"}>
             {t("routes.locallinks.top")}
           </a>
         </li>
@@ -33,7 +33,7 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = () => {
 
   const privacyPolicyText: JSX.Element = (
     <>
-      <h1 id="top">
+      <h1>
         Datenschutz&shy;erkl&auml;rung
         <br />
         <br />

@@ -64,7 +64,7 @@ const CompanyDataTable: FunctionComponent<CompanyDataTableProps> = ({
                             head
                           ].toLowerCase()}`}
                         ></span>
-                        <button>{row[head]}</button>
+                        <span>{row[head]}</span>
                       </div>
                     ) : (
                       row[head]
