@@ -29,6 +29,12 @@ const Imprint: FunctionComponent<AppMainProps> = () => {
       <p>
         Quelle: <a href="https://www.e-recht24.de">eRecht24</a>
       </p>
+      <p>
+        Website-Logo auf Grundlage von:{" "}
+        <a href="https://de.vecteezy.com/gratis-vektor/balance">
+          Balance Vektoren von Vecteezy
+        </a>
+      </p>
     </div>
   );
 };
