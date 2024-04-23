@@ -1,6 +1,6 @@
 # ECOTRACE - CO₂ Emissions Visualization Tool
 
-EcoTrace is a modern, responsive web application designed to display CO₂ emissions data for countries and companies. Developed as part of a case study at IU International University, this tool aims to increase environmental awareness by providing easy access to emissions data through a user-friendly interface. Leveraging the latest in web technologies, EcoTrace offers an informative platform for users seeking to understand the carbon footprint of various entities.
+EcoTrace is a modern, responsive web application designed to display CO₂ emissions data for countries and companies. Developed as part of a case study at IU International University, this tool aims to increase environmental awareness by providing easy access to emissions data through a user-friendly interface.
 
 ## Available Scripts
 
