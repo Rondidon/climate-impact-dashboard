@@ -1,11 +1,7 @@
 import escapeStringRegexp from "escape-string-regexp";
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import {
-  DisplayOption,
-  FilterQuery,
-  YearOption,
-} from "../../types/filterQuery";
+import { DisplayOption, FilterQuery } from "../../types/filterQuery";
 
 type FilterSidebarProps = {
   currentFilterQuery: FilterQuery;
@@ -35,7 +31,9 @@ const FilterSidebar: React.FunctionComponent<FilterSidebarProps> = ({
 
   useEffect(() => {
     const isYearValid = (year: number | "" | undefined): boolean => {
-      return year === "" || (year != undefined && year >= 2015 && year <= 2023);
+      return (
+        year === "" || (year !== undefined && year >= 2015 && year <= 2023)
+      );
     };
     const areYearsInOrder = !yearFrom || !yearTo || yearFrom <= yearTo;
     const isValid =

@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import { useMemo, useState } from "react";
 
 export interface SortState {
   key: string | null;

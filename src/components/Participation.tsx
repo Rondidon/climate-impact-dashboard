@@ -4,7 +4,7 @@ import getAssetLocation from "../utils/assetLocator";
 
 type ParticipationProps = {};
 
-const Participation: FunctionComponent<ParticipationProps> = ({}) => {
+const Participation: FunctionComponent<ParticipationProps> = () => {
   const { t } = useTranslation();
   return (
     <div className="container">

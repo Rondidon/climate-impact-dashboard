@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 
 type PrivacyPolicyProps = {};
 
-const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
+const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = () => {
   const { t } = useTranslation();
 
   const localLinkList: JSX.Element = (
@@ -13,7 +13,7 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
       </h6>
       <ul>
         <li>
-          <a className="nav-link" href={"#"}>
+          <a className="nav-link" href={"#top"}>
             {t("routes.locallinks.top")}
           </a>
         </li>
@@ -33,7 +33,7 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = ({}) => {
 
   const privacyPolicyText: JSX.Element = (
     <>
-      <h1>
+      <h1 id="top">
         Datenschutz&shy;erkl&auml;rung
         <br />
         <br />

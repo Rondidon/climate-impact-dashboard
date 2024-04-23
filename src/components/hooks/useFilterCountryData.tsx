@@ -31,6 +31,7 @@ const useFilterCountryData = (
     if (countryCodeArray) {
       return countryCodeArray.includes(lineCountryCodeLower);
     }
+    return undefined;
   });
 
   // Filter data based on year range if provided

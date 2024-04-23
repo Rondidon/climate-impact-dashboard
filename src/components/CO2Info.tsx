@@ -1,9 +1,9 @@
-import { FunctionComponent, useEffect } from "react";
+import { FunctionComponent } from "react";
 import { useTranslation } from "react-i18next";
 
 type CO2InfoProps = {};
 
-const CO2Info: FunctionComponent<CO2InfoProps> = ({}) => {
+const CO2Info: FunctionComponent<CO2InfoProps> = () => {
   const { t } = useTranslation();
 
   return (

@@ -1,8 +1,8 @@
-import { FunctionComponent, useEffect } from "react";
+import { FunctionComponent } from "react";
 
 type AppMainProps = {};
 
-const Imprint: FunctionComponent<AppMainProps> = ({}) => {
+const Imprint: FunctionComponent<AppMainProps> = () => {
   return (
     <div className="container my-0 my-xl-5">
       <h1>

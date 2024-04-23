@@ -40,7 +40,7 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
     <header>
       <nav className="navbar navbar-expand-lg climate-scheme-bg-black">
         <div className="container-fluid">
-          <a
+          <button
             className="navbar-brand brand-logo d-flex align-items-center"
             data-bs-toggle="tooltip"
             data-bs-placement="bottom"
@@ -57,7 +57,7 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
               <strong>{t("claim.part1")}</strong>
               {t("claim.part2")}
             </div>
-          </a>
+          </button>
           <button
             className="navbar-toggler navbar-dark"
             type="button"
@@ -89,17 +89,16 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
               </li>
             </ul>
             <li className="dropdown">
-              <a
+              <button
                 className="dropdown-toggle nav-link mx-lg-3"
-                role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
                 {t("header.languageSelector")}
-              </a>
+              </button>
               <ul className="dropdown-menu">
                 <li>
-                  <a
+                  <button
                     onClick={(e) => {
                       e.preventDefault();
                       i18n.changeLanguage("de");
@@ -107,10 +106,10 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
                     className="dropdown-item"
                   >
                     {t("common.languages.de")}
-                  </a>
+                  </button>
                 </li>
                 <li>
-                  <a
+                  <button
                     onClick={(e) => {
                       e.preventDefault();
                       i18n.changeLanguage("en");
@@ -118,7 +117,7 @@ const AppHeader: FunctionComponent<AppHeaderProps> = ({
                     className="dropdown-item"
                   >
                     {t("common.languages.en")}
-                  </a>
+                  </button>
                 </li>
               </ul>
             </li>
