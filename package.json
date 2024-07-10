@@ -1,5 +1,6 @@
 {
   "name": "climate-impact-dashboard",
+  "homepage": "https://rondidon.github.io/climate-impact-dashboard",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -51,6 +52,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "homepage": "https://rondidon.github.io/climate-impact-dashboard"
+  }
 }

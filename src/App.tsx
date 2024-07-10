@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HashRouter } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import AppFooter from "./components/AppFooter";
 import AppHeader from "./components/AppHeader";
 import AppMain from "./components/AppMain";
@@ -16,7 +16,7 @@ function App() {
   const [searchQuery, setSearchQuery] = useState<string>("");
   return (
     <div className="App climate-scheme-bg-grey" style={appStyle}>
-      <HashRouter>
+      <BrowserRouter>
         <ScrollToTop />
         <AppHeader
           searchQuery={searchQuery}
@@ -24,7 +24,7 @@ function App() {
         />
         <AppMain searchQuery={searchQuery} />
         <AppFooter />
-      </HashRouter>
+      </BrowserRouter>
     </div>
   );
 }
