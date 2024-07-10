@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import { useTranslation } from "react-i18next";
+import { HashLink } from "react-router-hash-link";
 
 type PrivacyPolicyProps = {};
 
@@ -13,19 +14,19 @@ const PrivacyPolicy: FunctionComponent<PrivacyPolicyProps> = () => {
       </h6>
       <ul>
         <li>
-          <a className="nav-link" href={"#header"}>
+          <HashLink className="nav-link" to={"#header"}>
             {t("routes.locallinks.top")}
-          </a>
+          </HashLink>
         </li>
         <li>
-          <a className="nav-link" href={"#privacyAtAGlance"}>
+          <HashLink className="nav-link" to={"#privacyAtAGlance"}>
             {t("routes.locallinks.privacypolicy1")}
-          </a>
+          </HashLink>
         </li>
         <li>
-          <a className="nav-link" href={"#mandatoryInformation"}>
+          <HashLink className="nav-link" to={"#mandatoryInformation"}>
             {t("routes.locallinks.privacypolicy2")}
-          </a>
+          </HashLink>
         </li>
       </ul>
     </div>
